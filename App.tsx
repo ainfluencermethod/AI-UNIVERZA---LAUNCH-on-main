@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Zap, Lock, Settings, Monitor, CreditCard, CheckCircle, X, Scale } from 'lucide-react';
+import { Zap, Lock, Settings, Monitor, CreditCard, CheckCircle, X, Scale, Webhook } from 'lucide-react';
 import { Hero } from './components/Hero';
 import { SocialProof } from './components/SocialProof';
 import { Reviews } from './components/Reviews';
@@ -66,6 +66,30 @@ const App: React.FC = () => {
     setCurrentStep('success');
     // Clean URL
     safePushState('/?step=success');
+  };
+
+  const triggerTestWebhook = async () => {
+    try {
+        const payload = {
+            email: "test_demo_user@example.com",
+            name: "Test Demo User",
+            event: "purchase_success",
+            source: "aiuniverza.si",
+            timestamp: new Date().toISOString()
+        };
+
+        await fetch("https://services.leadconnectorhq.com/hooks/TGsyH70nsz7y3hijuqTn/webhook-trigger/a9e48390-6ba0-493d-a25b-71956b37e3f9", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(payload)
+        });
+        alert("Test webhook poslan! Preveri 'Fetch Sample Requests' v GHL.");
+    } catch (error) {
+        console.error("Webhook error:", error);
+        alert("Napaka pri pošiljanju webhooka.");
+    }
   };
 
   return (
@@ -254,6 +278,15 @@ const App: React.FC = () => {
                   className={`flex items-center gap-3 px-3 py-2 rounded-lg text-xs font-medium transition-colors ${currentStep === 'success' ? 'bg-green-500/10 text-green-400' : 'text-gray-300 hover:bg-white/5 hover:text-white'}`}
                >
                   <CheckCircle size={14} /> Thank You Page
+               </button>
+               
+               <div className="h-px bg-white/10 my-1"></div>
+
+               <button 
+                  onClick={triggerTestWebhook}
+                  className="flex items-center gap-3 px-3 py-2 rounded-lg text-xs font-medium text-blue-400 hover:bg-blue-500/10 transition-colors"
+               >
+                  <Webhook size={14} /> Test GHL Webhook
                </button>
             </div>
           </div>
