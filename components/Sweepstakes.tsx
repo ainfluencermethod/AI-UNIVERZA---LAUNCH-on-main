@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Watch, Smartphone, Laptop, Ticket, Trophy, Sparkles, ArrowRight } from 'lucide-react';
+import { Smartphone, Laptop, Ticket, Trophy, Sparkles, ArrowRight } from 'lucide-react';
 import { Button } from './Button';
 
 export const Sweepstakes: React.FC = () => {
@@ -92,7 +92,11 @@ export const Sweepstakes: React.FC = () => {
                     {/* Shimmer Effect */}
                     <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-[#FFD700]/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out z-10"></div>
                     
-                    <Watch className="w-14 h-14 text-[#FFD700] group-hover:rotate-12 group-hover:scale-110 transition-transform duration-500 relative z-20" strokeWidth={1.5} />
+                    <img 
+                        src="https://storage.googleapis.com/msgsndr/TGsyH70nsz7y3hijuqTn/media/6962a16398efbdd080a8d448.png" 
+                        alt="Rolex Datejust" 
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 relative z-20" 
+                    />
                 </div>
                 
                 <div className="text-center relative z-10">
