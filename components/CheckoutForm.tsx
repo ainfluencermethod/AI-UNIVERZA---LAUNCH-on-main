@@ -1,101 +1,74 @@
-import React, { useEffect, useState } from 'react';
-import { Building2, ShieldCheck, Timer } from 'lucide-react';
+import React from 'react';
+import { Check, ArrowRight, Zap } from 'lucide-react';
 
 export const CheckoutForm: React.FC = () => {
-  const [timeLeft, setTimeLeft] = useState(600); // 10 minutes
-
-  useEffect(() => {
-    // Check if script is already present to prevent duplicates
-    if (!document.querySelector('script[src="https://js.stripe.com/v3/buy-button.js"]')) {
-        const script = document.createElement('script');
-        script.src = "https://js.stripe.com/v3/buy-button.js";
-        script.async = true;
-        document.body.appendChild(script);
-    }
-
-    const timer = setInterval(() => {
-        setTimeLeft((prev) => (prev > 0 ? prev - 1 : 0));
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, []);
-
-  const formatTime = (seconds: number) => {
-    const mins = Math.floor(seconds / 60);
-    const secs = seconds % 60;
-    return `${mins}:${secs.toString().padStart(2, '0')}`;
+  const handleCheckout = () => {
+    window.location.href = "https://buy.stripe.com/dRm5kE8RE50EeDbdUY93y03";
   };
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center p-4 md:p-6 relative">
-        {/* Header matching the screenshot design */}
-        <div className="text-center mb-6 relative z-10">
-            <h3 className="text-2xl font-black text-white mb-2 tracking-tight uppercase">
-                Zaključi Naročilo
-            </h3>
-            
-            {/* Holding Spot Timer */}
-            <div className="inline-flex items-center gap-2 bg-red-500/10 border border-red-500/20 px-3 py-1 rounded-full animate-pulse">
-                <Timer size={12} className="text-red-500" />
-                <span className="text-red-400 text-xs font-bold uppercase tracking-wide">
-                    Tvoje mesto držimo še: {formatTime(timeLeft)}
-                </span>
-            </div>
-        </div>
-
-        {/* The White Card UI */}
-        <div className="bg-white rounded-[1.5rem] p-5 md:p-6 w-full max-w-[92%] md:max-w-[340px] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)] relative z-10 flex flex-col items-center text-center animate-fade-in-up overflow-hidden">
+    <div className="w-full h-full flex flex-col items-center justify-center p-4 relative">
+        {/* The White Card UI - Pricing Card */}
+        <div className="bg-white rounded-[2.5rem] p-8 w-full max-w-[380px] shadow-2xl relative z-10 flex flex-col items-center text-center overflow-hidden border border-gray-100">
              
-             {/* Logo Placeholder */}
-             <div className="w-16 h-16 bg-white border border-gray-100 shadow-sm rounded-xl flex items-center justify-center mb-4 p-3">
-                 <Building2 className="text-red-500 w-full h-full" strokeWidth={1.5} />
-             </div>
-
-             <h4 className="text-gray-500 font-medium uppercase text-xs tracking-widest mb-2">AI Univerza</h4>
-             
-             <div className="flex items-baseline justify-center gap-1 mb-1 text-gray-900">
-                 <span className="font-medium text-lg self-start mt-1">€</span>
-                 <span className="font-bold text-5xl tracking-tighter">41.42</span>
-                 <div className="flex flex-col items-start leading-none ml-1">
-                     <span className="text-[10px] text-gray-500 font-medium uppercase">per</span>
-                     <span className="text-[10px] text-gray-500 font-medium uppercase">month</span>
+             {/* Product Identity */}
+             <div className="mb-6">
+                 <div className="w-14 h-14 bg-black rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                    <Zap className="text-brand-gold w-8 h-8 fill-brand-gold" />
                  </div>
+                 <h4 className="text-gray-900 font-black text-2xl uppercase tracking-tight leading-none">AI Influencer</h4>
+                 <p className="text-gray-500 font-medium text-xs uppercase tracking-widest mt-2">Generacija Januar 2026</p>
              </div>
              
-             <p className="text-gray-400 text-xs font-medium mb-6">€497 billed annually</p>
-
-             {/* Stripe Button Embed */}
-             <div className="w-full mb-4">
-                 {React.createElement('stripe-buy-button', {
-                    'buy-button-id': "buy_btn_1SnQMfKa629ollckYB8EvdwD",
-                    'publishable-key': "pk_live_51SmzQ5Ka629ollckyPHN4dsoZlkXWdeWOgt9dHOJtGfVax4a0AG2SIGkCfU3LFGqIz5NpVlbF2mKAv3ePQLzzVbE005rdo0y6s",
-                 })}
+             {/* Main Price */}
+             <div className="flex items-baseline justify-center gap-1 mb-2 text-[#1d1d1f]">
+                 <span className="font-bold text-4xl self-start mt-2">€</span>
+                 <span className="font-black text-7xl tracking-tighter leading-none">497</span>
              </div>
+             <p className="text-gray-400 text-[10px] font-bold uppercase tracking-widest mb-8 bg-gray-50 px-3 py-1 rounded-full">Enkratno plačilo / leto</p>
 
-             {/* Guarantee Badge INSIDE the card */}
-             <div className="flex items-center justify-center gap-2 mb-4 bg-gray-50 py-2 px-3 rounded-lg w-full">
-                <ShieldCheck size={14} className="text-green-600" />
-                <span className="text-[10px] font-bold text-gray-600 uppercase">14-Day Money Back Guarantee</span>
-             </div>
+             <div className="w-full border-t border-gray-100 mb-6"></div>
 
-             <div className="w-full">
-                 <p className="text-[10px] text-gray-400 mb-3 font-medium">Supported payment methods:</p>
-                 <div className="flex justify-center gap-2 opacity-50 grayscale hover:grayscale-0 transition-all duration-300">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg" className="h-3" alt="Stripe" />
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" className="h-3" alt="Mastercard" />
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" className="h-3" alt="Visa" />
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Amex_logo.svg" className="h-3" alt="Amex" />
+             {/* Features List */}
+             <div className="w-full text-left space-y-3 mb-8 px-2">
+                <div className="flex items-start gap-3">
+                    <div className="bg-green-100 p-0.5 rounded-full text-green-600 mt-0.5 shrink-0"><Check size={12} strokeWidth={4} /></div>
+                    <span className="text-gray-700 text-sm font-bold leading-tight">Celoten Blueprint Sistem</span>
+                </div>
+                <div className="flex items-start gap-3">
+                    <div className="bg-green-100 p-0.5 rounded-full text-green-600 mt-0.5 shrink-0"><Check size={12} strokeWidth={4} /></div>
+                    <span className="text-gray-700 text-sm font-bold leading-tight">Agencija B2B (Modul)</span>
+                </div>
+                 <div className="flex items-start gap-3">
+                    <div className="bg-green-100 p-0.5 rounded-full text-green-600 mt-0.5 shrink-0"><Check size={12} strokeWidth={4} /></div>
+                    <span className="text-gray-700 text-sm font-bold leading-tight">Dostop do Skool Skupnosti</span>
+                </div>
+                 <div className="flex items-start gap-3">
+                    <div className="bg-green-100 p-0.5 rounded-full text-green-600 mt-0.5 shrink-0"><Check size={12} strokeWidth={4} /></div>
+                    <span className="text-gray-700 text-sm font-bold leading-tight">Vstopnica za 15.000€ Sklad</span>
                 </div>
              </div>
 
-        </div>
-        
-        {/* Footer Security Badge */}
-        <div className="mt-8 text-center">
-             <div className="flex items-center justify-center gap-2 text-[9px] text-gray-600 font-bold uppercase tracking-widest">
-                <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
-                256-Bit SSL Encrypted Payment
+             {/* Subscribe Button */}
+             <div className="w-full mb-6">
+                 <button 
+                    onClick={handleCheckout}
+                    className="w-full bg-[#000] hover:bg-[#222] text-white font-bold text-lg py-5 rounded-xl shadow-xl transition-all duration-200 transform active:scale-[0.98] flex items-center justify-center gap-2 group border border-gray-800"
+                 >
+                    Pridruži se <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform text-brand-gold" />
+                 </button>
              </div>
+
+             {/* Trust/Payment Icons */}
+             <div className="w-full">
+                 <div className="flex justify-center gap-3 opacity-30 grayscale hover:grayscale-0 transition-all duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" className="h-5 object-contain" alt="PayPal" />
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" className="h-5 object-contain" alt="Mastercard" />
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" className="h-5 object-contain" alt="Visa" />
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" className="h-5 object-contain" alt="Apple Pay" />
+                </div>
+             </div>
+
         </div>
     </div>
   );

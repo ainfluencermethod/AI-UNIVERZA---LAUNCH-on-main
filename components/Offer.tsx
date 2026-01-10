@@ -146,7 +146,7 @@ export const Offer: React.FC = () => {
                   </div>
               </div>
 
-              {/* RIGHT SIDE - Payment (Stripe Embed) */}
+              {/* RIGHT SIDE - Pricing Card */}
               <div className="lg:w-2/5 bg-black p-0 relative overflow-hidden flex flex-col justify-center border-l-4 border-black py-12 lg:py-0 lg:min-h-[800px]">
                   {/* Decorative Elements for Black Side */}
                   <div className="absolute top-0 right-0 w-64 h-64 bg-brand-gold/10 blur-[80px] rounded-full pointer-events-none"></div>
@@ -166,7 +166,6 @@ export const Offer: React.FC = () => {
               </div>
               <div className="h-4 w-px bg-black/20"></div>
               <div className="flex gap-3 grayscale opacity-70">
-                   <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg" className="h-4" alt="Stripe" />
                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" className="h-4" alt="Mastercard" />
                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" className="h-4" alt="Visa" />
               </div>

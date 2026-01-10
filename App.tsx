@@ -57,8 +57,8 @@ const App: React.FC = () => {
   };
 
   const handleUpsellAccept = () => {
-    // Redirect to the Stripe Checkout for the Upsell Product
-    window.location.href = "https://buy.stripe.com/YOUR_UPSELL_LINK_HERE"; 
+    // Upsell logic placeholder (Payment link removed)
+    console.log("Upsell accepted");
   };
 
   const handleUpsellDecline = () => {

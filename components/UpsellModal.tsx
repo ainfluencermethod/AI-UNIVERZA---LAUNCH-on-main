@@ -24,6 +24,10 @@ export const UpsellModal: React.FC<UpsellModalProps> = ({ onAccept, onDecline })
     return `${mins}:${secs.toString().padStart(2, '0')}`;
   };
 
+  const handleUpgrade = () => {
+    window.location.href = "https://buy.stripe.com/dRm5kE8RE50EeDbdUY93y03";
+  };
+
   return (
     <div className="min-h-screen bg-black flex items-center justify-center p-4 md:p-8 animate-in fade-in zoom-in-95 duration-500 overflow-y-auto">
       
@@ -181,13 +185,17 @@ export const UpsellModal: React.FC<UpsellModalProps> = ({ onAccept, onDecline })
                 </div>
 
                 <div className="space-y-4">
-                    <Button 
-                        fullWidth 
-                        onClick={onAccept}
-                        className="text-lg py-5 bg-gradient-to-r from-[#bf953f] via-[#fcf6ba] to-[#b38728] text-black font-black shadow-[0_0_30px_rgba(191,149,63,0.3)] hover:shadow-[0_0_50px_rgba(191,149,63,0.5)] border-none"
-                    >
-                        DA, NADGRADI MOJE NAROČILO
-                    </Button>
+                    {/* Replaced Stripe Embed Button */}
+                    <div className="w-full">
+                         <Button 
+                             onClick={handleUpgrade}
+                             className="w-full py-5 text-xl font-black uppercase shadow-[0_0_30px_rgba(255,215,0,0.3)]"
+                             variant="primary"
+                             autoShimmer
+                         >
+                             DA! NADGRADI MOJE NAROČILO
+                         </Button>
+                    </div>
                     
                     <button 
                         onClick={onDecline}
