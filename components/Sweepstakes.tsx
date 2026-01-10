@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Smartphone, Laptop, Ticket, Trophy, Sparkles, ArrowRight } from 'lucide-react';
-import { Button } from './Button';
+import { Smartphone, Ticket, Trophy, Sparkles } from 'lucide-react';
 
 export const Sweepstakes: React.FC = () => {
   const [recentWinner, setRecentWinner] = useState("Luka Z. iz Kopra");
@@ -65,11 +64,15 @@ export const Sweepstakes: React.FC = () => {
                 </div>
                 
                 {/* Icon Container with Shimmer */}
-                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#222] to-black border border-white/10 flex items-center justify-center mb-6 shadow-inner group-hover:scale-105 transition-transform duration-500 relative overflow-hidden">
+                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#222] to-black border border-white/10 flex items-center justify-center mb-6 shadow-inner group-hover:scale-105 transition-transform duration-500 relative overflow-hidden p-4">
                     {/* Shimmer Effect */}
                     <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out z-10"></div>
                     
-                    <Laptop className="w-10 h-10 text-gray-400 group-hover:text-white group-hover:-translate-y-1 group-hover:scale-110 transition-all duration-300 relative z-20" strokeWidth={1.5} />
+                    <img 
+                        src="https://storage.googleapis.com/msgsndr/TGsyH70nsz7y3hijuqTn/media/6962e5c0f13bc3497e783eb5.png" 
+                        alt="MacBook Pro"
+                        className="w-full h-full object-contain relative z-20 group-hover:scale-110 transition-transform duration-300"
+                    />
                 </div>
                 
                 <div className="text-center">
@@ -116,11 +119,15 @@ export const Sweepstakes: React.FC = () => {
                 </div>
                 
                 {/* Icon Container with Shimmer */}
-                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#222] to-black border border-white/10 flex items-center justify-center mb-6 shadow-inner group-hover:scale-105 transition-transform duration-500 relative overflow-hidden">
+                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#222] to-black border border-white/10 flex items-center justify-center mb-6 shadow-inner group-hover:scale-105 transition-transform duration-500 relative overflow-hidden p-4">
                     {/* Shimmer Effect */}
                     <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out z-10"></div>
 
-                    <Smartphone className="w-10 h-10 text-gray-400 group-hover:text-white group-hover:-translate-y-1 group-hover:scale-110 transition-all duration-300 relative z-20" strokeWidth={1.5} />
+                    <img 
+                        src="https://storage.googleapis.com/msgsndr/TGsyH70nsz7y3hijuqTn/media/6962e5c0e1863868d4af000f.png" 
+                        alt="iPhone 17 Pro"
+                        className="w-full h-full object-contain relative z-20 group-hover:scale-110 transition-transform duration-300"
+                    />
                 </div>
                 
                 <div className="text-center">
