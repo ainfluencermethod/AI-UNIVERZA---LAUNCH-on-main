@@ -28,7 +28,7 @@ export const VideoDemo: React.FC = () => {
         }
       `}</style>
       {/* @ts-ignore */}
-      <wistia-player media-id="6ktu529k4i" aspect="1.7777777777777777"></wistia-player>
+      <wistia-player media-id="6ktu529k4i" aspect="1.7777777777777777" playbar="false"></wistia-player>
     </div>
   );
 };

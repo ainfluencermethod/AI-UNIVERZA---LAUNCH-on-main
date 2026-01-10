@@ -71,9 +71,8 @@ export const Hero: React.FC = () => {
 
         {/* Video Player - Central Focus with Glow */}
         <div className="w-full max-w-4xl mx-auto mb-10 md:mb-12 animate-fade-in-up px-0 sm:px-4 relative group" style={{ animationDelay: '300ms' }}>
-            {/* Ambient Glow behind video - Enhanced Intensity */}
-            <div className="absolute -inset-4 md:-inset-8 bg-brand-gold/40 rounded-[2rem] blur-3xl opacity-60 group-hover:opacity-100 transition duration-1000 animate-pulse-slow"></div>
-            <div className="absolute -inset-1 bg-gradient-to-b from-brand-gold to-transparent rounded-[2rem] opacity-20 blur-md"></div>
+            {/* Ambient Glow behind video - Strong Pulse */}
+            <div className="absolute -inset-1 bg-brand-gold/50 rounded-[2rem] blur-3xl animate-pulse-slow"></div>
             
             <div className="relative rounded-xl md:rounded-[1.5rem] overflow-hidden border border-white/10 shadow-[0_0_50px_-10px_rgba(0,0,0,0.7)] bg-black z-10">
                  <VideoDemo />

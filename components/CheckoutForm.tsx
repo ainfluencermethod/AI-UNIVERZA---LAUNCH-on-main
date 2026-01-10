@@ -3,7 +3,7 @@ import { Check, ArrowRight, Zap } from 'lucide-react';
 
 export const CheckoutForm: React.FC = () => {
   const handleCheckout = () => {
-    window.location.href = "https://buy.stripe.com/dRm5kE8RE50EeDbdUY93y03";
+    window.location.href = "https://buy.stripe.com/28EbJ26JwfFibqZcQU93y04";
   };
 
   return (
