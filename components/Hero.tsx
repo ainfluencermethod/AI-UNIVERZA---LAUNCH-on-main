@@ -1,5 +1,5 @@
 import React from 'react';
-import { Briefcase, Ghost, Users } from 'lucide-react';
+import { Briefcase, Ghost, Users, ShieldCheck, Lock, Zap } from 'lucide-react';
 import { Button } from './Button';
 import { VideoDemo } from './VideoDemo';
 
@@ -45,7 +45,7 @@ export const Hero: React.FC = () => {
         </p>
 
         {/* Video Player - Central Focus with Glow */}
-        <div className="w-full max-w-4xl mx-auto mb-12 md:mb-16 animate-fade-in-up px-0 sm:px-4 relative group" style={{ animationDelay: '300ms' }}>
+        <div className="w-full max-w-4xl mx-auto mb-10 md:mb-12 animate-fade-in-up px-0 sm:px-4 relative group" style={{ animationDelay: '300ms' }}>
             {/* Ambient Glow behind video - Strong Pulse */}
             <div className="absolute -inset-1 bg-brand-gold/50 rounded-[2rem] blur-3xl animate-pulse-slow"></div>
             
@@ -54,27 +54,56 @@ export const Hero: React.FC = () => {
             </div>
         </div>
 
-        {/* 3. CTA Section */}
-        <div className="animate-fade-in-up w-full flex flex-col items-center relative z-20 px-4 mt-4" style={{ animationDelay: '400ms' }}>
+        {/* 3. IMPROVED CTA Section */}
+        <div className="animate-fade-in-up w-full flex flex-col items-center relative z-20 px-4 mt-6" style={{ animationDelay: '400ms' }}>
              
-             <div className="relative group w-full md:w-auto cursor-pointer mb-12">
-                {/* Main Glow */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[180%] bg-brand-gold/30 rounded-[100%] blur-[80px] opacity-60 group-hover:opacity-80 transition-opacity duration-500 animate-pulse-slow pointer-events-none"></div>
-                
-                {/* Button */}
-                <Button 
-                    onClick={() => document.getElementById('offer')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="py-5 md:py-6 px-10 md:px-16 text-xl md:text-2xl w-full md:w-auto font-black tracking-tight relative z-10 shadow-[0_20px_40px_-10px_rgba(255,215,0,0.3)] hover:shadow-[0_25px_50px_-10px_rgba(255,215,0,0.5)] border-t border-white/40 border-b border-black/20"
-                    autoShimmer
-                    variant="primary"
-                >
-                    PRIDRUŽI SE
-                </Button>
+             <div className="flex flex-col items-center w-full md:w-auto relative">
+                 {/* Scarcity Indicator */}
+                 <div className="absolute -top-10 md:-top-12 left-1/2 -translate-x-1/2 whitespace-nowrap bg-red-500/10 border border-red-500/20 text-red-500 px-4 py-1.5 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-widest flex items-center gap-2 mb-2 animate-pulse shadow-[0_0_15px_rgba(239,68,68,0.2)] backdrop-blur-sm z-30">
+                    <span className="relative flex h-2 w-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                    </span>
+                    Omejena Mesta: Zaprtje Kmalu
+                 </div>
+
+                 <div className="relative group w-full md:w-auto cursor-pointer mb-6">
+                    {/* Main Glow */}
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[150%] bg-brand-gold/40 rounded-[100%] blur-[60px] opacity-60 group-hover:opacity-100 transition-opacity duration-500 animate-pulse-slow pointer-events-none"></div>
+                    
+                    {/* Button */}
+                    <Button 
+                        onClick={() => document.getElementById('offer')?.scrollIntoView({ behavior: 'smooth' })}
+                        className="py-6 px-10 md:px-24 text-xl md:text-3xl w-full md:w-auto font-black tracking-tight relative z-10 shadow-[0_20px_40px_-10px_rgba(255,215,0,0.3)] hover:shadow-[0_30px_60px_-10px_rgba(255,215,0,0.6)] border-t border-white/40 border-b border-black/20 hover:scale-[1.02] active:scale-[0.98] transition-transform duration-200"
+                        autoShimmer
+                        variant="primary"
+                    >
+                        PRIDRUŽI SE ZDAJ
+                    </Button>
+                 </div>
+
+                 {/* Trust Badges */}
+                 <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-xs text-gray-500 font-medium opacity-80 bg-black/40 backdrop-blur-sm px-6 py-3 rounded-full border border-white/5">
+                    <div className="flex items-center gap-2">
+                        <ShieldCheck size={14} className="text-green-500" /> 
+                        <span className="text-gray-300">14-Dnevna Garancija</span>
+                    </div>
+                    <div className="hidden md:block w-px h-3 bg-white/10"></div>
+                    <div className="flex items-center gap-2">
+                        <Zap size={14} className="text-brand-gold" /> 
+                        <span className="text-gray-300">Takojšen Dostop</span>
+                    </div>
+                    <div className="hidden md:block w-px h-3 bg-white/10"></div>
+                    <div className="flex items-center gap-2">
+                        <Lock size={14} className="text-gray-400" /> 
+                        <span className="text-gray-300">Varno Plačilo</span>
+                    </div>
+                 </div>
              </div>
         </div>
 
         {/* 4. Footer Icons - Premium Badges */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-2xl mx-auto px-4 animate-fade-in-up" style={{ animationDelay: '600ms' }}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-2xl mx-auto px-4 animate-fade-in-up mt-16" style={{ animationDelay: '600ms' }}>
             
             <div className="bg-[#0A0A0A] border border-white/10 p-4 rounded-xl flex items-center justify-center gap-4 hover:border-brand-gold/30 hover:bg-white/[0.02] transition-all duration-300 group cursor-default shadow-lg backdrop-blur-sm relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:animate-shimmer pointer-events-none"></div>

@@ -101,7 +101,7 @@ const App: React.FC = () => {
               <ScrollReveal delay={0} duration={1000} yOffset={40} threshold={0.2}>
                   <div className="py-12 text-center max-w-4xl mx-auto px-6">
                       <p className="text-xl md:text-2xl text-gray-300 leading-relaxed font-light font-serif italic">
-                          To niso "spletni guruji". To so študenti, frizerke, inženirji in popolni začetniki, ki so sledili sistemu in ustvarili več kot
+                          To niso "spletni guruji". To so tržniki, podjetniki, inženirji in popolni začetniki, ki so sledili sistemu in ustvarili več kot
                           <span className="text-white font-bold border-b border-brand-gold not-italic font-sans"> 50.000€ v manj kot 30 dneh.</span>
                       </p>
                       <p className="text-gray-500 mt-6 text-sm font-bold uppercase tracking-wide font-sans">

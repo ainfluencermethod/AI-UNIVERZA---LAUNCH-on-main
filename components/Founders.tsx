@@ -7,28 +7,32 @@ const team = [
     role: 'Soustanovitelj',
     handle: '@nepridiprav',
     image: 'https://storage.googleapis.com/msgsndr/TGsyH70nsz7y3hijuqTn/media/695d2a0d6c1415037d5b56a6.jpg',
-    link: 'https://www.instagram.com/nepridiprav/'
+    link: 'https://www.instagram.com/nepridiprav/',
+    socialProof: '94k sledilcev'
   },
   {
     name: 'Tim Brdnik',
     role: 'Soustanovitelj',
     handle: '@timbrdnik',
     image: 'https://storage.googleapis.com/msgsndr/TGsyH70nsz7y3hijuqTn/media/695fb8846eabe6432325b5d5.webp',
-    link: 'https://www.instagram.com/timbrdnik/'
+    link: 'https://www.instagram.com/timbrdnik/',
+    socialProof: 'Growth lead & AI Marketing (Ustvaril @Giuliaa.banks)'
   },
   {
     name: 'Luka Lorenčič',
     role: 'Soustanovitelj',
     handle: '@lukalorencic',
     image: 'https://storage.googleapis.com/msgsndr/TGsyH70nsz7y3hijuqTn/media/695d2b2cd5b483fb55c164f2.jpg',
-    link: 'https://www.instagram.com/lukalorencic/'
+    link: 'https://www.instagram.com/lukalorencic/',
+    socialProof: 'Dosegel čez 2 Miljardi ogledov na socialnih omrežjih'
   },
   {
     name: 'Žiga Klun',
-    role: 'Founder babiceva.ai',
+    role: 'Soustanovitelj',
     handle: '@ziga.klun',
     image: 'https://storage.googleapis.com/msgsndr/TGsyH70nsz7y3hijuqTn/media/695d2af96c141559bf5b7ec2.jpg',
-    link: 'https://www.instagram.com/ziga.klun/'
+    link: 'https://www.instagram.com/ziga.klun/',
+    socialProof: 'Ustvaril Babiceva.ai'
   }
 ];
 
@@ -91,8 +95,12 @@ export const Founders: React.FC = () => {
                 </div>
                 
                 <h3 className="text-white font-bold text-lg mb-1">{member.name}</h3>
-                <p className={`text-[10px] font-mono uppercase tracking-wide mb-4 ${member.name === 'Žiga Klun' ? 'text-brand-gold' : 'text-gray-500'}`}>
+                <p className="text-[10px] font-mono uppercase tracking-wide mb-2 text-gray-500">
                     {member.role}
+                </p>
+
+                <p className="text-xs text-brand-gold/90 font-bold mb-4 px-2 min-h-[2.5rem] flex items-center justify-center leading-tight">
+                    {member.socialProof}
                 </p>
                 
                 <div className="mt-auto flex items-center gap-2 text-gray-400 text-xs group-hover:text-white transition-colors bg-white/5 px-3 py-1.5 rounded-full">

@@ -6,13 +6,13 @@ export const Challenge: React.FC = () => {
     {
       id: 1,
       title: "11. - 17. JANUAR: Štart 2026",
-      subtitle: "Iniciacija & Strategija",
+      subtitle: "Temelji AI Kreative",
       Icon: Rocket,
       iconClass: "text-white",
       tasks: [
-        "Izbira niše (Trendi 2026)",
-        "Postavitev AI 'Fasade'",
-        "Prva generacija vsebine"
+        "Mastering orodij (Midjourney, Flux)",
+        "Kreacija 'High-End' grafik za splet",
+        "Psihologija viralnih UGC oglasov"
       ],
       active: true,
       highlight: false
@@ -20,12 +20,12 @@ export const Challenge: React.FC = () => {
     {
       id: 2,
       title: "18. - 24. JANUAR: Validacija",
-      subtitle: "Testiranje Trga",
+      subtitle: "UGC & Prvi Ogledi",
       Icon: Zap,
       iconClass: "text-white",
       tasks: [
-        "Viralna strategija objav",
-        "Testiranje 3 različnih 'hookov'",
+        "Izdelava realističnih AI video oglasov",
+        "Lansiranje AI vplivneža na trg",
         "Cilj: Prvih 10.000 ogledov"
       ],
       active: false,
@@ -34,13 +34,13 @@ export const Challenge: React.FC = () => {
     {
       id: 3,
       title: "25. - 31. JANUAR: Profit",
-      subtitle: "Prvi Evri",
+      subtitle: "B2B & Monetizacija",
       Icon: DollarSign,
       iconClass: "text-white",
       tasks: [
-        "Launch digitalnega produkta",
-        "Nastavitev prodajnega lijaka",
-        "Monetizacija občinstva"
+        "Prodaja vsebin blagovnim znamkam",
+        "Rast profila proti 50k sledilcem",
+        "Prva izplačila za UGC storitve"
       ],
       active: false,
       highlight: true
@@ -48,13 +48,13 @@ export const Challenge: React.FC = () => {
     {
       id: 4,
       title: "1. - 10. FEBRUAR: Skaliranje",
-      subtitle: "Dominacija Leta",
+      subtitle: "100k Club & Dominacija",
       Icon: Trophy,
       iconClass: "text-brand-gold",
       tasks: [
-        "Avtomatizacija procesov",
-        "Uradni Launch za 2026",
-        "Tekmovanje za nagrade"
+        "Strategija za 100.000+ sledilcev",
+        "Sklenitev dolgoročnih pogodb",
+        "Avtomatizacija celotnega imperija"
       ],
       active: false,
       highlight: false
