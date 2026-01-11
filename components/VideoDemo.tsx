@@ -14,21 +14,20 @@ export const VideoDemo: React.FC = () => {
     };
 
     injectScript("https://fast.wistia.com/player.js");
-    injectScript("https://fast.wistia.com/embed/6ktu529k4i.js", true);
+    injectScript("https://fast.wistia.com/embed/td0bu2np6o.js", true);
   }, []);
 
   return (
     <div className="relative w-full aspect-video bg-black overflow-hidden">
       <style>{`
-        wistia-player[media-id='6ktu529k4i']:not(:defined) {
-          background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/6ktu529k4i/swatch');
+        wistia-player[media-id='td0bu2np6o']:not(:defined) {
+          background: center / cover no-repeat url('https://storage.googleapis.com/msgsndr/TGsyH70nsz7y3hijuqTn/media/696182c0f8a93b5ecc52aa2d.webp');
           display: block;
-          filter: blur(5px);
           padding-top: 56.25%;
         }
       `}</style>
       {/* @ts-ignore */}
-      <wistia-player media-id="6ktu529k4i" aspect="1.7777777777777777" playbar="false"></wistia-player>
+      <wistia-player media-id="td0bu2np6o" aspect="1.7777777777777777" playbar="false"></wistia-player>
     </div>
   );
 };
