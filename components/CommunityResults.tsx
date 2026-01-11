@@ -23,7 +23,7 @@ export const CommunityResults: React.FC = () => {
                     Konsistentna <span className="text-brand-gold italic">Rast</span>
                 </h2>
                 <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
-                    Ni važno, kje začneš. Važno je, kam greš. Naši študenti dosegajo eksponentno rast z uporabo AI algoritmov.
+                    Ni važno, kje začneš. Važno je, kam greš. Naši študenti dosegajo eksponentno rast z uporabo AI orodij.
                 </p>
             </div>
 

@@ -5,56 +5,55 @@ export const Challenge: React.FC = () => {
   const weeks = [
     {
       id: 1,
-      title: "11. - 17. JANUAR: Štart 2026",
-      subtitle: "Temelji AI Kreative",
+      title: "11.-16. Januar: Začni takoj!",
+      subtitle: "PREDNOST PRED OSTALIMI",
       Icon: Rocket,
       iconClass: "text-white",
       tasks: [
-        "Mastering orodij (Midjourney, Flux)",
-        "Kreacija 'High-End' grafik za splet",
-        "Psihologija viralnih UGC oglasov"
+        "Ustvariš AI Influencerja",
+        "Pripraviš Prve Reelse",
+        "Ogrevaš profil"
       ],
       active: true,
       highlight: false
     },
     {
       id: 2,
-      title: "18. - 24. JANUAR: Validacija",
-      subtitle: "UGC & Prvi Ogledi",
+      title: "16. Januar - 15. Februar: 30 dnevni challenge",
+      subtitle: "PRIGARAJ SI NOV MACBOOK PRO",
       Icon: Zap,
       iconClass: "text-white",
       tasks: [
-        "Izdelava realističnih AI video oglasov",
-        "Lansiranje AI vplivneža na trg",
-        "Cilj: Prvih 10.000 ogledov"
+        "3x Objave na dan",
+        "Viralne objave",
+        "Cilj: bodi najboljši in nagrajen"
       ],
       active: false,
       highlight: false
     },
     {
       id: 3,
-      title: "25. - 31. JANUAR: Profit",
-      subtitle: "B2B & Monetizacija",
+      title: "15. Februar - 15. April: Profit",
+      subtitle: "MONETIZACIJA",
       Icon: DollarSign,
       iconClass: "text-white",
       tasks: [
-        "Prodaja vsebin blagovnim znamkam",
-        "Rast profila proti 50k sledilcem",
-        "Prva izplačila za UGC storitve"
+        "Launch digitalnega produkta",
+        "Postavitev funnel-a (prodajni lijak)",
+        "Zaslužek"
       ],
       active: false,
       highlight: true
     },
     {
       id: 4,
-      title: "1. - 10. FEBRUAR: Skaliranje",
-      subtitle: "100k Club & Dominacija",
+      title: "15.april - 2027: Rast",
+      subtitle: "DOMINACIJA LETA",
       Icon: Trophy,
       iconClass: "text-brand-gold",
       tasks: [
-        "Strategija za 100.000+ sledilcev",
-        "Sklenitev dolgoročnih pogodb",
-        "Avtomatizacija celotnega imperija"
+        "Avtomatizacija procesov",
+        "Grajenje ekipe"
       ],
       active: false,
       highlight: false
@@ -80,7 +79,7 @@ export const Challenge: React.FC = () => {
                     Tvoj <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-yellow-200 to-brand-gold italic pr-2">Načrt za 2026</span>
                 </h2>
                 <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-                    Pozabi na ponesrečene novoletne zaobljube. Tukaj je matematično dokazan sistem, kako boš 
+                    Naj bo to leto, končno tvoje leto. Tukaj je matematično dokazan sistem, kako boš 
                     <strong className="text-white"> januarja 2026</strong> spremenil svojo finančno prihodnost.
                 </p>
             </div>

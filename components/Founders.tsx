@@ -42,10 +42,8 @@ export const Founders: React.FC = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/5 via-transparent to-transparent pointer-events-none"></div>
 
       <div className="max-w-4xl mx-auto relative z-10">
-        <p className="text-gray-500 text-xs tracking-[0.2em] uppercase mb-4">Spoznaj ekipo</p>
-        <h2 className="text-4xl md:text-6xl font-black italic mb-12 font-serif">
-            HEJ, TUKAJ <br/>
-            <span className="text-brand-gold">AI UNIVERZA</span>
+        <h2 className="text-4xl md:text-6xl font-black italic mb-12 font-serif uppercase">
+            SPOZNAJ <span className="text-brand-gold">EKIPO</span>
         </h2>
         
         {/* Manifesto Note */}
@@ -56,16 +54,25 @@ export const Founders: React.FC = () => {
              
              <div className="relative z-10 space-y-6 text-lg text-gray-300 font-light leading-relaxed">
                 <p>
-                    Preden smo ustanovili <strong className="text-white">AI Influencer Blueprint</strong>, smo bili točno tam, kjer si ti morda zdaj.
-                    Objavljali smo na stotine kratkih videov, ki so propadli. Čepeli smo v "200-view zaporu" mesece in čakali na preboj.
-                </p>
-                <p className="font-serif text-2xl text-white italic">
-                    Nato se je vse spremenilo.
+                    V digitalnem marketingu ne štejejo besede, ampak rezultati. Preden smo ustanovili <strong className="text-white">AI Univerzo</strong>, smo v ozadju delali za firme. Naša ekipa je v preteklem delu podjetjem zgenerirala več kot <strong className="text-white">69 milijonov dolarjev prometa</strong> in presegla mejo <strong className="text-white">1 milijarde ogledov</strong> na družbenih omrežjih.
                 </p>
                 <p>
-                    Odkrili smo način, kako z uporabo umetne inteligence ustvariti vplivneže, ki ne potrebujejo naše prisotnosti, ne potrebujejo snemanja in delajo 24/7.
-                    To ni "get rich quick". To je sistematičen pristop k novemu mediju.
+                    Zadnjih 6 mesecev smo 12 ur na dan dihali le za eno stvar: <strong className="text-brand-gold">Umetno inteligenco.</strong>
                 </p>
+                <ul className="space-y-4 list-none">
+                    <li className="flex gap-3">
+                        <span className="text-brand-gold">•</span>
+                        <span><strong className="text-white">Smo v svetovni eliti:</strong> Smo med top 0.01 % uporabnikov na platformi Higgsfield.</span>
+                    </li>
+                    <li className="flex gap-3">
+                        <span className="text-brand-gold">•</span>
+                        <span><strong className="text-white">Praksa, ne teorija:</strong> Zgenerirali smo več kot 50.000 kosov AI vsebin z vsemi dostopnimi orodji na trgu.</span>
+                    </li>
+                    <li className="flex gap-3">
+                        <span className="text-brand-gold">•</span>
+                        <span><strong className="text-white">Dokazan model:</strong> Danes sami uspešno služimo z lastnimi digitalnimi produkti in avtomatiziranimi AI vplivneži.</span>
+                    </li>
+                </ul>
                 <p>
                     Naša misija je preprosta: Opolnomočiti 1000 Slovencev, da ustvarijo digitalno neodvisnost v letu 2026.
                 </p>

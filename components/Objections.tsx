@@ -7,8 +7,8 @@ export const Objections: React.FC = () => {
   const objections = [
       { id: 0, icon: BoxSelect, title: "Nimam nobenih izkušenj", text: "Popolno. Manj izkušenj pomeni manj slabih navad. Naš sistem je 'Copy-Paste'. Če znaš slediti receptu za kuhanje, znaš slediti temu blueprintu." },
       { id: 1, icon: ScanFace, title: "Sram me je snemati videe", text: "Nihče te ne bo videl. Celoten model temelji na AI ustvarjenih karakterjih ali 'faceless' videih. Tvoja anonimnost je 100% zagotovljena." },
-      { id: 2, icon: Calculator, title: "Nimam 1000€ za investicijo", text: "Ta metoda ne zahteva plačevanja oglasov. Rastemo organsko. Začneš lahko z 0€ in uporabljaš brezplačna AI orodja, ki ti jih pokažemo." },
-      { id: 3, icon: Users, title: "Ali je trg prenasičen?", text: "Smešno vprašanje. Smo v letu 1 (Day 1) AI revolucije. Prenasičenost se bo zgodila leta 2030. Kdor vstopi danes, je med prvih 0.1% na svetu." },
+      { id: 2, icon: Calculator, title: "Nimam 497€ za investicijo", text: "Če bi naslednjih 6 mesecev delal 12 ur na dan in kupoval napačna orodja, da bi sam odkril ta sistem, bi zapravil bogastvo. 497€ je le 0,23€ na uro tvojega prihranjenega časa. To je bližnjica, ki ti prihrani pol leta življenja in denarja za neuporabne naročnine, poleg tega te pa pripravi, da si zagotoviš mesto med zmagovalci naslednjega desetletja." },
+      { id: 3, icon: Users, title: "Ali je trg prenasičen?", text: "Smešno vprašanje. To je kot Bitcoin v letu 2017, smo v samem začetku AI revolucije. Kdor vstopi danes, je med prvimi na svetu." },
   ];
 
   return (

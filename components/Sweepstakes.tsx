@@ -50,7 +50,7 @@ export const Sweepstakes: React.FC = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[#FFD700]/10 blur-[100px] -z-10 rounded-full"></div>
             
             <p className="text-xl md:text-3xl text-white font-serif italic mt-4 text-shadow-sm">
-                Ekskluzivno za člane <span className="text-[#FFD700]">Januarske Generacije</span>
+                Ekskluzivno za študente <span className="text-[#FFD700]">AI Univerze</span>
             </p>
         </div>
 
@@ -60,7 +60,7 @@ export const Sweepstakes: React.FC = () => {
             {/* 2nd Place: MacBook */}
             <div className="order-2 md:order-1 bg-[#0a0a0a] border border-white/10 rounded-[2rem] p-8 flex flex-col items-center relative group hover:border-white/20 transition-all duration-300">
                 <div className="absolute -top-4 bg-[#222] text-gray-300 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest border border-white/10">
-                    Tech Setup
+                    NAGRADA #2
                 </div>
                 
                 {/* Icon Container with Shimmer */}
@@ -77,7 +77,7 @@ export const Sweepstakes: React.FC = () => {
                 
                 <div className="text-center">
                     <h3 className="font-bold text-white text-xl mb-1">MacBook Pro</h3>
-                    <p className="text-xs text-gray-500 font-mono uppercase tracking-widest">M3 Max Chip</p>
+                    <p className="text-xs text-gray-500 font-mono uppercase tracking-widest">M5</p>
                 </div>
             </div>
 
@@ -115,7 +115,7 @@ export const Sweepstakes: React.FC = () => {
             {/* 3rd Place: iPhone */}
             <div className="order-3 md:order-3 bg-[#0a0a0a] border border-white/10 rounded-[2rem] p-8 flex flex-col items-center relative group hover:border-white/20 transition-all duration-300">
                 <div className="absolute -top-4 bg-[#222] text-gray-300 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest border border-white/10">
-                    Mobile Studio
+                    NAGRADA #3
                 </div>
                 
                 {/* Icon Container with Shimmer */}
@@ -132,7 +132,7 @@ export const Sweepstakes: React.FC = () => {
                 
                 <div className="text-center">
                     <h3 className="font-bold text-white text-xl mb-1">iPhone 17 Pro</h3>
-                    <p className="text-xs text-gray-500 font-mono uppercase tracking-widest">Titanium Black</p>
+                    <p className="text-xs text-gray-500 font-mono uppercase tracking-widest">Cosmic Orange</p>
                 </div>
             </div>
 
@@ -150,11 +150,11 @@ export const Sweepstakes: React.FC = () => {
                                 <Ticket className="text-[#FFD700] w-6 h-6" />
                             </div>
                             <h4 className="text-xl md:text-2xl font-black text-white uppercase italic">
-                                Bonus za hitre
+                                nagrada za pogum
                             </h4>
                          </div>
                          <p className="text-gray-400 text-lg leading-relaxed">
-                            Vsi, ki se pridružijo do <strong className="text-white">16. 1.</strong>, prejmejo <strong className="text-white">1x vstopnico</strong> v žrebalni boben.
+                            Vsi, ki se pridružijo do <strong className="text-white">16. 1. do 23.29</strong>, prejmejo <strong className="text-white">1x vstopnico</strong> v žrebanje za nagrade.
                          </p>
                     </div>
 

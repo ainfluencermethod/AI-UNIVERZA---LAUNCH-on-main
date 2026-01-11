@@ -1,5 +1,5 @@
 import React from 'react';
-import { Briefcase, Ghost, Users, ShieldCheck, Lock, Zap } from 'lucide-react';
+import { Briefcase, Ghost, Users, ShieldCheck, Lock, Zap, Trophy } from 'lucide-react';
 import { Button } from './Button';
 import { VideoDemo } from './VideoDemo';
 
@@ -29,7 +29,7 @@ export const Hero: React.FC = () => {
                      <Users size={12} className="text-black fill-black" />
                 </div>
                 <span className="text-brand-gold text-xs md:text-sm font-black uppercase tracking-widest whitespace-nowrap drop-shadow-sm">
-                    Pridruži se 120+ članom
+                    NE ZAMUDI: VPIS SE ZAPIRA 16.1.
                 </span>
             </div>
         </div>
@@ -41,7 +41,7 @@ export const Hero: React.FC = () => {
 
         {/* 2. Subheadline */}
         <p className="text-base sm:text-lg md:text-xl text-gray-300 font-medium mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed drop-shadow-md text-center animate-fade-in-up px-4" style={{ animationDelay: '200ms' }}>
-          Glej mi čez ramo, ko ti pokažem točen sistem, ki mi je ustvaril <span className="text-white font-bold border-b border-brand-gold/50">10.000€+ v samo 7 dneh</span>. Brez olepšav, samo rezultati.
+          Pridruži se v AI Univerzo, ko ti pokažemo <span className="text-white font-bold">točen sistem</span>, ki nam je ustvaril <span className="text-white font-bold border-b border-brand-gold/50">10.000€+ v samo 7 dneh</span>. Brez olepšav, samo rezultati.
         </p>
 
         {/* Video Player - Central Focus with Glow */}
@@ -58,13 +58,10 @@ export const Hero: React.FC = () => {
         <div className="animate-fade-in-up w-full flex flex-col items-center relative z-20 px-4 mt-6" style={{ animationDelay: '400ms' }}>
              
              <div className="flex flex-col items-center w-full md:w-auto relative">
-                 {/* Scarcity Indicator */}
-                 <div className="absolute -top-10 md:-top-12 left-1/2 -translate-x-1/2 whitespace-nowrap bg-red-500/10 border border-red-500/20 text-red-500 px-4 py-1.5 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-widest flex items-center gap-2 mb-2 animate-pulse shadow-[0_0_15px_rgba(239,68,68,0.2)] backdrop-blur-sm z-30">
-                    <span className="relative flex h-2 w-2">
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                      <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
-                    </span>
-                    Omejena Mesta: Zaprtje Kmalu
+                 {/* Scarcity Indicator - UPDATED to Sweepstakes */}
+                 <div className="absolute -top-10 md:-top-12 left-1/2 -translate-x-1/2 whitespace-nowrap bg-[#FFD700]/10 border border-[#FFD700]/20 text-[#FFD700] px-4 py-1.5 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-widest flex items-center gap-2 mb-2 animate-pulse shadow-[0_0_15px_rgba(255,215,0,0.2)] backdrop-blur-sm z-30">
+                    <Trophy size={14} className="fill-[#FFD700]" />
+                    POTEGUJ SE ZA 15.000€ NAGRAD
                  </div>
 
                  <div className="relative group w-full md:w-auto cursor-pointer mb-6">

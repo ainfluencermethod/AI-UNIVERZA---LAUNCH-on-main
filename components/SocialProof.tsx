@@ -55,7 +55,7 @@ export const SocialProof: React.FC = () => {
         </div>
         
         <p className="text-lg md:text-2xl text-gray-300 font-medium mb-12 max-w-3xl mx-auto leading-relaxed">
-            Od tistih, ki so sprejeli ta izziv v tujini zadnjič in spremenili svoja življenja.
+            Naši študentje v tujini dosegajo rezultate, ki jim spreminjajo življenja.
         </p>
 
         {/* Dashboard Mockup Container */}
@@ -69,11 +69,6 @@ export const SocialProof: React.FC = () => {
                         <div className="text-gray-500 text-xs uppercase mb-1">Top Študent</div>
                         <div className="text-white font-bold text-lg">kia.tyllerxo</div>
                         <div className="text-brand-gold font-mono text-xl">+15.000€ Profit</div>
-                    </div>
-                    <div className="bg-gray-900/50 p-4 rounded-xl border border-gray-800 opacity-60">
-                        <div className="text-gray-500 text-xs uppercase mb-1">Povprečen študent</div>
-                        <div className="text-white font-bold text-lg">Cash Chaser</div>
-                        <div className="text-brand-gold font-mono text-xl">+9.941€ Profit</div>
                     </div>
                 </div>
                 

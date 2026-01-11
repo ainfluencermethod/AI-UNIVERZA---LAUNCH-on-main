@@ -28,16 +28,13 @@ export const Guarantee: React.FC = () => {
                         100% Brez Tveganja
                     </h3>
                     <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-                        Tako smo prepričani v AI Influencer sistem, da prevzamemo vse tveganje. 
+                        Tako smo prepričani v AI Univerzo, da prevzamemo vso tveganje. 
                         Če v 14 dneh ne boš navdušen nad vsebino ali rezultati, ti povrnemo celotno kupnino. 
                         Brez vprašanj. Brez drobnega tiska.
                     </p>
                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-400">
                         <li className="flex items-center gap-2 justify-center md:justify-start">
-                            <Check className="text-brand-gold" size={16} /> Instantna povrnitev
-                        </li>
-                        <li className="flex items-center gap-2 justify-center md:justify-start">
-                            <Check className="text-brand-gold" size={16} /> Obdržiš materiale
+                            <Check className="text-brand-gold" size={16} /> Takojšnja povrnitev
                         </li>
                     </ul>
                 </div>

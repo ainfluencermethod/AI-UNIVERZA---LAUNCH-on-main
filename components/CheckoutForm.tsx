@@ -16,8 +16,7 @@ export const CheckoutForm: React.FC = () => {
                  <div className="w-14 h-14 bg-black rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                     <Zap className="text-brand-gold w-8 h-8 fill-brand-gold" />
                  </div>
-                 <h4 className="text-gray-900 font-black text-2xl uppercase tracking-tight leading-none">AI Influencer</h4>
-                 <p className="text-gray-500 font-medium text-xs uppercase tracking-widest mt-2">Generacija Januar 2026</p>
+                 <h4 className="text-gray-900 font-black text-2xl uppercase tracking-tight leading-none">AI Univerza</h4>
              </div>
              
              {/* Main Price */}
@@ -25,7 +24,7 @@ export const CheckoutForm: React.FC = () => {
                  <span className="font-bold text-4xl self-start mt-2">€</span>
                  <span className="font-black text-7xl tracking-tighter leading-none">497</span>
              </div>
-             <p className="text-gray-400 text-[10px] font-bold uppercase tracking-widest mb-8 bg-gray-50 px-3 py-1 rounded-full">Enkratno plačilo / leto</p>
+             <p className="text-gray-400 text-[10px] font-bold uppercase tracking-widest mb-8 bg-gray-50 px-3 py-1 rounded-full">/leto</p>
 
              <div className="w-full border-t border-gray-100 mb-6"></div>
 
@@ -33,11 +32,11 @@ export const CheckoutForm: React.FC = () => {
              <div className="w-full text-left space-y-3 mb-8 px-2">
                 <div className="flex items-start gap-3">
                     <div className="bg-green-100 p-0.5 rounded-full text-green-600 mt-0.5 shrink-0"><Check size={12} strokeWidth={4} /></div>
-                    <span className="text-gray-700 text-sm font-bold leading-tight">Celoten Blueprint Sistem</span>
+                    <span className="text-gray-700 text-sm font-bold leading-tight">Celoten AI Influencer Sistem</span>
                 </div>
                 <div className="flex items-start gap-3">
                     <div className="bg-green-100 p-0.5 rounded-full text-green-600 mt-0.5 shrink-0"><Check size={12} strokeWidth={4} /></div>
-                    <span className="text-gray-700 text-sm font-bold leading-tight">Agencija B2B (Modul)</span>
+                    <span className="text-gray-700 text-sm font-bold leading-tight">Celoten Agencija/Brand Sistem</span>
                 </div>
                  <div className="flex items-start gap-3">
                     <div className="bg-green-100 p-0.5 rounded-full text-green-600 mt-0.5 shrink-0"><Check size={12} strokeWidth={4} /></div>

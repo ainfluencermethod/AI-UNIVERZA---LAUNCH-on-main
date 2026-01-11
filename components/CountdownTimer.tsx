@@ -48,7 +48,7 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDateStr, v
                       <span className="relative inline-flex rounded-full h-2 w-2 bg-red-600"></span>
                     </span>
                     <span className="text-[10px] md:text-xs font-bold text-white uppercase tracking-widest hidden sm:inline">
-                        Vpis v Generacijo Januar 2026 se zapre čez:
+                        Vpis v AI Univerzo se zapre čez:
                     </span>
                     <span className="text-[10px] font-bold text-white uppercase tracking-widest sm:hidden">
                         Vpis se zapre čez:
@@ -71,7 +71,7 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDateStr, v
                     onClick={() => document.getElementById('offer')?.scrollIntoView({ behavior: 'smooth' })}
                     className="hidden md:block bg-brand-gold hover:bg-yellow-400 text-black text-[10px] font-black uppercase tracking-wider py-2 px-4 rounded transition-all shadow-[0_0_15px_rgba(255,215,0,0.3)] hover:shadow-[0_0_25px_rgba(255,215,0,0.5)] transform hover:scale-105"
                 >
-                    Rezerviraj Mesto
+                    Pridruži se zdaj
                 </button>
              </div>
         </div>

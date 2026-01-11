@@ -9,7 +9,6 @@ import { Objections } from './components/Objections';
 import { Process } from './components/Process';
 import { Sweepstakes } from './components/Sweepstakes';
 import { SweepstakesRules } from './components/SweepstakesRules';
-import { Comparison } from './components/Comparison';
 import { Founders } from './components/Founders';
 import { Paths } from './components/Paths';
 import { Challenge } from './components/Challenge';
@@ -101,11 +100,11 @@ const App: React.FC = () => {
               <ScrollReveal delay={0} duration={1000} yOffset={40} threshold={0.2}>
                   <div className="py-12 text-center max-w-4xl mx-auto px-6">
                       <p className="text-xl md:text-2xl text-gray-300 leading-relaxed font-light font-serif italic">
-                          To niso "spletni guruji". To so tržniki, podjetniki, inženirji in popolni začetniki, ki so sledili sistemu in ustvarili več kot
-                          <span className="text-white font-bold border-b border-brand-gold not-italic font-sans"> 50.000€ v manj kot 30 dneh.</span>
+                          To so ljudje, <span className="text-white font-bold">brez predznanja o uporabi AI orodij</span>, ki so sledili sistemu in ustvarili več kot
+                          <span className="text-white font-bold border-b border-brand-gold not-italic font-sans"> 10.000€ v manj kot 30 dneh.</span>
                       </p>
                       <p className="text-gray-500 mt-6 text-sm font-bold uppercase tracking-wide font-sans">
-                          Sistem deluje, če delaš ti. Ali si pripravljen?
+                          Sistem je prilagojen začetnikom. Ali si pripravljen?
                       </p>
                   </div>
               </ScrollReveal>
@@ -155,10 +154,6 @@ const App: React.FC = () => {
               
               <ScrollReveal>
                   <Guarantee />
-              </ScrollReveal>
-
-              <ScrollReveal>
-                  <Comparison />
               </ScrollReveal>
 
               <ScrollReveal>

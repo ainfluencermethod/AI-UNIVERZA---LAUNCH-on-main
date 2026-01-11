@@ -8,7 +8,7 @@ const faqs = [
   },
   {
     question: "Koliko časa moram vložiti dnevno?",
-    answer: "Večina naših najuspešnejših študentov porabi med 1 do 2 uri na dan. Ker uporabljamo AI za generiranje vsebine, je proces bistveno hitrejši kot pri tradicionalnem ustvarjanju vsebin."
+    answer: "Večina naših najuspešnejših študentov porabi med 2 do 3 ure na dan. Ker uporabljamo AI za generiranje vsebine, je proces bistveno hitrejši kot pri tradicionalnem ustvarjanju vsebin."
   },
   {
     question: "Ali potrebujem močan računalnik?",
@@ -24,7 +24,7 @@ const faqs = [
   },
   {
     question: "Ali so vključeni dodatni stroški za orodja?",
-    answer: "Pokazali ti bomo, kako začeti z brezplačnimi verzijami orodij. Ko boš začel/a služiti, pa priporočamo investicijo v pro verzije (cca 20-40€/mesec) za hitrejšo rast, vendar to na začetku ni nujno."
+    answer: "Ker pri nas prakticiramo kvaliteto, uporabljamo plačljiva orodja. Dodatni stroški so med 30-100eur/mesec. To je vsa investicija, ki jo rabiš za eksponentno rast"
   }
 ];
 

@@ -14,11 +14,8 @@ export const Offer: React.FC = () => {
           {/* Header */}
           <div className="text-center mb-12">
               <h2 className="font-serif text-4xl md:text-6xl text-black font-black italic mb-4">
-                  Pridruži se AI Revoluciji
+                  Pridružite se AI Univerzi
               </h2>
-              <p className="text-black/80 font-bold text-lg uppercase tracking-widest">
-                  Generacija Januar 2026
-              </p>
           </div>
 
           <div className="bg-white rounded-[2.5rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] flex flex-col lg:flex-row overflow-hidden border-4 border-black relative">
@@ -30,7 +27,7 @@ export const Offer: React.FC = () => {
                   <div>
                     <h2 className="text-2xl md:text-3xl font-black text-black mb-8 flex items-center gap-3 uppercase tracking-tighter">
                         <Zap className="fill-black w-6 h-6" />
-                        Tvoj "Arsenal" za uspeh:
+                        Tvoja bližnjica do uspeha:
                     </h2>
 
                     <div className="space-y-4 mb-8">
@@ -41,10 +38,10 @@ export const Offer: React.FC = () => {
                             </div>
                             <div className="flex-1">
                                 <div className="flex justify-between items-start">
-                                    <h3 className="font-bold text-lg text-gray-900 leading-tight">AI Influencer Blueprint</h3>
+                                    <h3 className="font-bold text-lg text-gray-900 leading-tight">AI Influencer Accelerator</h3>
                                     <span className="font-mono font-bold text-gray-400 text-sm">1.997€</span>
                                 </div>
-                                <p className="text-xs text-gray-500 mt-1">Celoten sistem od A do Ž za gradnjo karakterjev.</p>
+                                <p className="text-xs text-gray-500 mt-1">Celoten sistem od nule do 100M ogledov.</p>
                             </div>
                         </div>
 
@@ -55,10 +52,10 @@ export const Offer: React.FC = () => {
                             </div>
                             <div className="flex-1">
                                 <div className="flex justify-between items-start">
-                                    <h3 className="font-bold text-lg text-gray-900 leading-tight">AI Agencija Blueprint</h3>
+                                    <h3 className="font-bold text-lg text-gray-900 leading-tight">AI Agencija</h3>
                                     <span className="font-mono font-bold text-gray-400 text-sm">1.497€</span>
                                 </div>
-                                <p className="text-xs text-gray-500 mt-1">Sistem za prodajo AI storitev podjetjem (B2B).</p>
+                                <p className="text-xs text-gray-500 mt-1">Celoten sistem od nule do prodajanje AI vsebine podjetjem (B2B).</p>
                             </div>
                         </div>
 
@@ -69,10 +66,10 @@ export const Offer: React.FC = () => {
                             </div>
                             <div className="flex-1">
                                 <div className="flex justify-between items-start">
-                                    <h3 className="font-bold text-lg text-gray-900 leading-tight">Private Skool Mastermind</h3>
+                                    <h3 className="font-bold text-lg text-gray-900 leading-tight">Private Skool Skupnost</h3>
                                     <span className="font-mono font-bold text-gray-400 text-sm">997€</span>
                                 </div>
-                                <p className="text-xs text-gray-500 mt-1">Dostop do skupnosti zmagovalcev in mentorjev.</p>
+                                <p className="text-xs text-gray-500 mt-1">Dostop do skupnosti soustvarjalcev in mentorjev.</p>
                             </div>
                         </div>
                         
@@ -83,7 +80,7 @@ export const Offer: React.FC = () => {
                             </div>
                             <div className="flex-1">
                                 <div className="flex justify-between items-start">
-                                    <h3 className="font-bold text-lg text-gray-900 leading-tight">Tedenski Q&A Klici</h3>
+                                    <h3 className="font-bold text-lg text-gray-900 leading-tight">Mesečni Q&A Klici</h3>
                                     <span className="font-mono font-bold text-gray-400 text-sm">497€</span>
                                 </div>
                                 <p className="text-xs text-gray-500 mt-1">Arhiv vseh preteklih klicev + dostop do novih.</p>
@@ -136,7 +133,6 @@ export const Offer: React.FC = () => {
                             <p className="text-2xl font-bold text-gray-300 line-through decoration-red-500 decoration-2">6.182€</p>
                         </div>
                         <div className="text-right">
-                            <p className="text-black font-black text-lg uppercase tracking-wide mb-0">Generacija Januar:</p>
                             <div className="flex items-baseline justify-end gap-1">
                                 <p className="text-6xl font-black text-[#00B67A] tracking-tighter leading-none shadow-green-200 drop-shadow-sm">497€</p>
                                 <p className="text-xs text-gray-400 font-bold uppercase mb-1">/ leto</p>
