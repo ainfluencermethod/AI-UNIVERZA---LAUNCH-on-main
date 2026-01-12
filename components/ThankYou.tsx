@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { CheckCircle2, Mail, ShieldCheck } from 'lucide-react';
 import { Button } from './Button';
@@ -34,7 +35,7 @@ export const ThankYou: React.FC = () => {
             <div className="absolute -inset-1 bg-gradient-to-b from-green-500/30 to-transparent rounded-[2rem] blur-xl opacity-50 group-hover:opacity-75 transition duration-1000"></div>
             
             <div className="relative rounded-xl md:rounded-[1.5rem] overflow-hidden border border-white/10 shadow-2xl bg-black z-10">
-                 <VideoDemo videoId="omlm9gyasa" />
+                 <VideoDemo videoId="0kbkab7wmg" />
             </div>
             <p className="mt-4 text-sm text-gray-500 uppercase tracking-widest font-bold animate-pulse">
                 👇 Oglej si pomembna navodila spodaj 👇
@@ -52,7 +53,7 @@ export const ThankYou: React.FC = () => {
                  <div>
                     <h3 className="font-bold text-white text-lg">Preveri svoj Email</h3>
                     <p className="text-gray-400 text-sm leading-relaxed">
-                       V nekaj minutah boš prejel/a email z naslovom <strong>"Dobrodošel v AI Univerzi"</strong>. 
+                       V nekaj minutah boš prejel/a email z naslovom <strong>"Dobrodošel v AI Universi"</strong>. 
                        V njem so tvoji podatki za dostop do platforme in Skool skupnosti.
                     </p>
                     <p className="text-xs text-red-400 mt-2 font-bold uppercase">
@@ -77,7 +78,7 @@ export const ThankYou: React.FC = () => {
 
         <Button 
             variant="primary"
-            onClick={() => window.location.href = "https://www.skool.com/aiuniverza"} 
+            onClick={() => window.location.href = "https://www.skool.com/aiuniversa"} 
             className="w-full md:w-auto mx-auto text-lg py-4"
         >
             PRIDRUŽI SE SKOOL SKUPNOSTI TAKOJ

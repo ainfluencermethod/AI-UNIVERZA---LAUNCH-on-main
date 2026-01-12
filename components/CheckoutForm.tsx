@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Check, ArrowRight, Zap } from 'lucide-react';
 
@@ -16,7 +17,7 @@ export const CheckoutForm: React.FC = () => {
                  <div className="w-14 h-14 bg-black rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                     <Zap className="text-brand-gold w-8 h-8 fill-brand-gold" />
                  </div>
-                 <h4 className="text-gray-900 font-black text-2xl uppercase tracking-tight leading-none">AI Univerza</h4>
+                 <h4 className="text-gray-900 font-black text-2xl uppercase tracking-tight leading-none">AI Universa</h4>
              </div>
              
              {/* Main Price */}

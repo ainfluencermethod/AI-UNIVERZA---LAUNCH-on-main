@@ -1,6 +1,21 @@
+
 import React, { useMemo } from 'react';
 import { TrendingUp, DollarSign } from 'lucide-react';
 import { AreaChart, Area, Tooltip, ResponsiveContainer, XAxis } from 'recharts';
+
+const CustomTooltip = ({ active, payload, label }: any) => {
+  if (active && payload && payload.length) {
+    return (
+      <div className="bg-[#111] border border-white/10 p-3 rounded-xl shadow-2xl backdrop-blur-md">
+        <p className="text-gray-500 text-[10px] font-bold uppercase mb-1">{label}</p>
+        <p className="text-white font-bold text-sm font-mono">
+           €{payload[0].value.toLocaleString('sl-SI', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+        </p>
+      </div>
+    );
+  }
+  return null;
+};
 
 export const RevenueChart: React.FC = () => {
   
@@ -45,20 +60,6 @@ export const RevenueChart: React.FC = () => {
     };
   }, []);
 
-  const CustomTooltip = ({ active, payload, label }: any) => {
-    if (active && payload && payload.length) {
-      return (
-        <div className="bg-[#111] border border-white/10 p-3 rounded-xl shadow-2xl backdrop-blur-md">
-          <p className="text-gray-500 text-[10px] font-bold uppercase mb-1">{label}</p>
-          <p className="text-white font-bold text-sm font-mono">
-             €{payload[0].value.toLocaleString('sl-SI', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
-          </p>
-        </div>
-      );
-    }
-    return null;
-  };
-
   return (
     <div className="w-full max-w-md mx-auto relative group">
        {/* Glow effect */}
@@ -101,7 +102,7 @@ export const RevenueChart: React.FC = () => {
                       <stop offset="95%" stopColor="#00B67A" stopOpacity={0}/>
                     </linearGradient>
                   </defs>
-                  <Tooltip content={<CustomTooltip />} cursor={{ stroke: 'white', strokeWidth: 1, strokeOpacity: 0.1, strokeDasharray: '4 4' }} />
+                  <Tooltip content={CustomTooltip} cursor={{ stroke: 'white', strokeWidth: 1, strokeOpacity: 0.1, strokeDasharray: '4 4' }} />
                   <Area 
                     type="monotone" 
                     dataKey="value" 

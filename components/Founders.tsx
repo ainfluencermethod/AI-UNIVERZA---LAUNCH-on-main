@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Instagram } from 'lucide-react';
 
@@ -54,7 +55,7 @@ export const Founders: React.FC = () => {
              
              <div className="relative z-10 space-y-6 text-lg text-gray-300 font-light leading-relaxed">
                 <p>
-                    V digitalnem marketingu ne štejejo besede, ampak rezultati. Preden smo ustanovili <strong className="text-white">AI Univerzo</strong>, smo v ozadju delali za firme. Naša ekipa je v preteklem delu podjetjem zgenerirala več kot <strong className="text-white">69 milijonov dolarjev prometa</strong> in presegla mejo <strong className="text-white">1 milijarde ogledov</strong> na družbenih omrežjih.
+                    V digitalnem marketingu ne štejejo besede, ampak rezultati. Preden smo ustanovili <strong className="text-white">AI Universa</strong>, smo v ozadju delali za firme. Naša ekipa je v preteklem delu podjetjem zgenerirala več kot <strong className="text-white">69 milijonov dolarjev prometa</strong> in presegla mejo <strong className="text-white">1 milijarde ogledov</strong> na družbenih omrežjih.
                 </p>
                 <p>
                     Zadnjih 6 mesecev smo 12 ur na dan dihali le za eno stvar: <strong className="text-brand-gold">Umetno inteligenco.</strong>
@@ -83,7 +84,7 @@ export const Founders: React.FC = () => {
                      Se vidimo na drugi strani,
                  </p>
                  <p className="text-gray-500 font-bold uppercase tracking-widest text-xs mt-2">
-                     - Ekipa AI Univerza
+                     - Ekipa AI Universa
                  </p>
              </div>
         </div>

@@ -1,5 +1,6 @@
+
 import React, { useState, useEffect } from 'react';
-import { Zap, Lock, Monitor, CreditCard, CheckCircle, X, Scale } from 'lucide-react';
+import { X } from 'lucide-react';
 import { Hero } from './components/Hero';
 import { SocialProof } from './components/SocialProof';
 import { Reviews } from './components/Reviews';
@@ -25,6 +26,7 @@ import { ThankYou } from './components/ThankYou';
 import { CountdownTimer } from './components/CountdownTimer';
 import { Button } from './components/Button';
 import { CheckoutForm } from './components/CheckoutForm';
+import { CookieConsent } from './components/CookieConsent';
 
 type AppStep = 'landing' | 'upsell' | 'success' | 'rules' | 'privacy' | 'terms' | 'contact';
 
@@ -77,6 +79,8 @@ const App: React.FC = () => {
 
   return (
     <>
+      <CookieConsent />
+      
       {currentStep === 'rules' && <SweepstakesRules />}
       {currentStep === 'privacy' && <PrivacyPolicy />}
       {currentStep === 'terms' && <TermsAndConditions />}
@@ -127,7 +131,7 @@ const App: React.FC = () => {
               <ScrollReveal>
                   <CommunityResults />
               </ScrollReveal>
-              
+
               <ScrollReveal>
                   <Objections />
               </ScrollReveal>
@@ -165,7 +169,7 @@ const App: React.FC = () => {
               </ScrollReveal>
 
               <footer className="text-center py-12 text-gray-600 text-sm bg-black border-t border-gray-900 relative z-10 px-4">
-                  <p className="mb-4">© 2026 AI Univerza.</p>
+                  <p className="mb-4">© 2026 AI Universa.</p>
                   <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 underline">
                       <button onClick={() => navigateTo('terms')} className="hover:text-brand-gold transition-colors">Splošni pogoji</button>
                       <button onClick={() => navigateTo('rules')} className="hover:text-brand-gold transition-colors">Pravila igre</button>

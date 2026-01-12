@@ -1,10 +1,11 @@
+
 import React, { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
 
 const faqs = [
   {
     question: "Ali je ta tečaj primeren za popolne začetnike?",
-    answer: "Absolutno. AI Univerza je zasnovana tako, da te pelje od nule do prvega zaslužka. Ne potrebuješ predhodnega znanja o marketingu, AI orodjih ali poslu. Vse tehnične stvari so razložene 'klik-za-klikom'."
+    answer: "Absolutno. AI Universa je zasnovana tako, da te pelje od nule do prvega zaslužka. Ne potrebuješ predhodnega znanja o marketingu, AI orodjih ali poslu. Vse tehnične stvari so razložene 'klik-za-klikom'."
   },
   {
     question: "Koliko časa moram vložiti dnevno?",

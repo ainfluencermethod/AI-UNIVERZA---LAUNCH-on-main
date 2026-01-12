@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { User, Building2, ArrowRight } from 'lucide-react';
 
@@ -10,7 +11,7 @@ export const Paths: React.FC = () => {
             IZBERI SVOJO POT DO <span className="text-brand-gold italic">SVOBODE</span>
           </h2>
           <p className="text-gray-400 text-lg">
-            Znotraj AI Univerze dobiš dostop do OBEH smeri. Ni se ti treba omejevati.
+            Znotraj AI Universa dobiš dostop do OBEH smeri. Ni se ti treba omejevati.
           </p>
         </div>
 

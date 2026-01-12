@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Check } from 'lucide-react';
 
@@ -71,7 +72,7 @@ export const Comparison: React.FC = () => {
                 </div>
             </div>
 
-            {/* Option 3: AI Univerza - Hero Card */}
+            {/* Option 3: AI Universa - Hero Card */}
             <div className="bg-[#111] rounded-2xl p-6 border-2 border-[#FFD700] flex flex-col relative shadow-[0_0_40px_-10px_rgba(255,215,0,0.15)] transform md:scale-105 z-10">
                 {/* Badge */}
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#FFD700] text-black text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-lg whitespace-nowrap">
@@ -79,7 +80,7 @@ export const Comparison: React.FC = () => {
                 </div>
 
                 <div className="mb-6 text-center">
-                    <h3 className="text-[#FFD700] font-black text-lg uppercase tracking-wider mb-1">AI Univerza</h3>
+                    <h3 className="text-[#FFD700] font-black text-lg uppercase tracking-wider mb-1">AI Universa</h3>
                     <div className="flex items-baseline justify-center gap-1">
                         <span className="text-5xl font-black text-white">497€</span>
                         <span className="text-gray-400 text-xs font-bold">Enkratno plačilo / leto</span>

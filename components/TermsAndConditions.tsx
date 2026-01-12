@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ArrowLeft, Gavel } from 'lucide-react';
 
@@ -17,7 +18,7 @@ export const TermsAndConditions: React.FC = () => {
             </h1>
             <div className="flex items-center gap-2 text-gray-500 text-sm">
                 <Gavel size={16} />
-                <span>Pravni pogoji uporabe spletne strani aiuniverza.si</span>
+                <span>Pravni pogoji uporabe spletne strani aiuniversa.si</span>
             </div>
         </div>
 
@@ -25,14 +26,14 @@ export const TermsAndConditions: React.FC = () => {
             <section>
                 <h2 className="text-white font-bold text-2xl mb-4">1. Splošno</h2>
                 <p>
-                    Ti splošni pogoji poslovanja določajo pogoje uporabe spletne strani aiuniverza.si ter pogoje nakupa izobraževalnih programov, ki jih nudi podjetje <strong>3PM d.o.o.</strong>. Z uporabo te spletne strani potrjujete, da ste seznanjeni s temi pogoji in se z njimi v celoti strinjate.
+                    Ti splošni pogoji poslovanja določajo pogoje uporabe spletne strani aiuniversa.si ter pogoje nakupa izobraževalnih programov, ki jih nudi podjetje <strong>3PM d.o.o.</strong>. Z uporabo te spletne strani potrjujete, da ste seznanjeni s temi pogoji in se z njimi v celoti strinjate.
                 </p>
             </section>
 
             <section>
                 <h2 className="text-white font-bold text-2xl mb-4">2. Dostop do vsebin</h2>
                 <p>
-                    Nakup programa AI Univerza omogoča uporabniku dostop do izobraževalnih vsebin za določeno obdobje (običajno 1 leto, razen če je navedeno drugače). Dostop je vezan na enega uporabnika in je neprenosljiv. V primeru deljenja dostopa z drugimi osebami si pridržujemo pravico do takojšnje blokade računa brez vračila kupnine.
+                    Nakup programa AI Universa omogoča uporabniku dostop do izobraževalnih vsebin za določeno obdobje (običajno 1 leto, razen če je navedeno drugače). Dostop je vezan na enega uporabnika in je neprenosljiv. V primeru deljenja dostopa z drugimi osebami si pridržujemo pravico do takojšnje blokade računa brez vračila kupnine.
                 </p>
             </section>
 
@@ -46,7 +47,7 @@ export const TermsAndConditions: React.FC = () => {
             <section>
                 <h2 className="text-white font-bold text-2xl mb-4">4. Garancija na zadovoljstvo</h2>
                 <p>
-                    Uporabnikom nudimo 14-dnevno garancijo na zadovoljstvo. V kolikor uporabnik ugotovi, da program ne ustreza njegovim pričakovanjem, lahko v roku 14 dni od nakupa zahteva povračilo kupnine na naslov pici@aiuniverza.si. Pogoj za vračilo je, da uporabnik ni pregledal več kot 20 % vsebine programa.
+                    Uporabnikom nudimo 14-dnevno garancijo na zadovoljstvo. V kolikor uporabnik ugotovi, da program ne ustreza njegovim pričakovanjem, lahko v roku 14 dni od nakupa zahteva povračilo kupnine na naslov pici@aiuniversa.si. Pogoj za vračilo je, da uporabnik ni pregledal več kot 20 % vsebine programa.
                 </p>
             </section>
 

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ShieldCheck, Check } from 'lucide-react';
 
@@ -28,7 +29,7 @@ export const Guarantee: React.FC = () => {
                         100% Brez Tveganja
                     </h3>
                     <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-                        Tako smo prepričani v AI Univerzo, da prevzamemo vso tveganje. 
+                        Tako smo prepričani v AI Universo, da prevzamemo vso tveganje. 
                         Če v 14 dneh ne boš navdušen nad vsebino ali rezultati, ti povrnemo celotno kupnino. 
                         Brez vprašanj. Brez drobnega tiska.
                     </p>

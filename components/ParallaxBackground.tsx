@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 
 export const ParallaxBackground: React.FC = () => {
@@ -33,8 +34,14 @@ export const ParallaxBackground: React.FC = () => {
 
       {/* Grid Texture - Layer 3 (Very Slow) */}
       <div 
-        className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20 transition-transform duration-75 ease-out will-change-transform"
-        style={{ transform: `translateY(${scrollY * 0.02}px)` }}
+        className="absolute inset-0 bg-white/[0.02] opacity-20 transition-transform duration-75 ease-out will-change-transform"
+        style={{ 
+            backgroundImage: 'linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px)',
+            backgroundSize: '4rem 4rem',
+            maskImage: 'radial-gradient(ellipse 60% 50% at 50% 0%, #000 70%, transparent 100%)',
+            WebkitMaskImage: 'radial-gradient(ellipse 60% 50% at 50% 0%, #000 70%, transparent 100%)',
+            transform: `translateY(${scrollY * 0.02}px)` 
+        }}
       ></div>
       
       {/* Accent Light - Layer 4 (Fast) - Bottom Gold/White */}

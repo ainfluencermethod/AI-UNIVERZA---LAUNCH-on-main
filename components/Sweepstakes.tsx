@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Smartphone, Ticket, Trophy, Sparkles } from 'lucide-react';
 
@@ -56,7 +57,7 @@ export const Sweepstakes: React.FC = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[#FFD700]/10 blur-[100px] -z-10 rounded-full"></div>
             
             <p className="text-xl md:text-3xl text-white font-serif italic mt-4 text-shadow-sm">
-                Ekskluzivno za študente <span className="text-[#FFD700]">AI Univerze</span>
+                Ekskluzivno za študente <span className="text-[#FFD700]">AI Universa</span>
             </p>
         </div>
 
@@ -177,7 +178,7 @@ export const Sweepstakes: React.FC = () => {
 
             <div className="mt-12 pt-8 border-t border-white/5">
                  <p className="text-[10px] text-gray-600 uppercase leading-relaxed font-medium max-w-3xl mx-auto">
-                    "*** OMEJITEV 1 PRIJAVE NA OSEBO/E-NASLOV. *** NAKUP ALI KAKRŠNOKOLI PLAČILO NI POGOJ ZA SODELOVANJE ALI ZMAGO. NAKUP NE POVEČA VAŠIH MOŽNOSTI ZA ZMAGO. Nagradna igra »AI Univerza« je odprta le za fizične osebe s stalnim prebivališčem v Republiki Sloveniji, ki so starejše od 18 let. Nagradna igra ni veljavna izven Slovenije in kjer je to zakonsko prepovedano. Zaključi se dne 16.01.2026 Za sodelovanje veljajo celotna pravila in splošni pogoji, ki so na voljo na <button onClick={handleRulesClick} className="underline hover:text-gray-400 transition-colors uppercase cursor-pointer">aiuniverza.si/pravila</button>."
+                    "*** OMEJITEV 1 PRIJAVE NA OSEBO/E-NASLOV. *** NAKUP ALI KAKRŠNOKOLI PLAČILO NI POGOJ ZA SODELOVANJE ALI ZMAGO. NAKUP NE POVEČA VAŠIH MOŽNOSTI ZA ZMAGO. Nagradna igra »AI Universa« je odprta le za fizične osebe s stalnim prebivališčem v Republiki Sloveniji, ki so starejše od 18 let. Nagradna igra ni veljavna izven Slovenije in kjer je to zakonsko prepovedano. Zaključi se dne 16.01.2026 Za sodelovanje veljajo celotna pravila in splošni pogoji, ki so na voljo na <button onClick={handleRulesClick} className="underline hover:text-gray-400 transition-colors uppercase cursor-pointer">aiuniversa.si/pravila</button>."
                  </p>
             </div>
         </div>

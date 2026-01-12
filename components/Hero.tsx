@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Briefcase, Ghost, Users, ShieldCheck, Lock, Zap, Trophy } from 'lucide-react';
 import { Button } from './Button';
@@ -41,7 +42,7 @@ export const Hero: React.FC = () => {
 
         {/* 2. Subheadline */}
         <p className="text-base sm:text-lg md:text-xl text-gray-300 font-medium mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed drop-shadow-md text-center animate-fade-in-up px-4" style={{ animationDelay: '200ms' }}>
-          Pridruži se v AI Univerzo, ko ti pokažemo <span className="text-white font-bold">točen sistem</span>, ki nam je ustvaril <span className="text-white font-bold border-b border-brand-gold/50">10.000€+ v samo 7 dneh</span>. Brez olepšav, samo rezultati.
+          Pridruži se v AI Universo, ko ti pokažemo <span className="text-white font-bold">točen sistem</span>, ki nam je ustvaril <span className="text-white font-bold border-b border-brand-gold/50">10.000€+ v samo 7 dneh</span>. Brez olepšav, samo rezultati.
         </p>
 
         {/* Video Player - Central Focus with Glow */}
@@ -51,7 +52,7 @@ export const Hero: React.FC = () => {
             
             <div className="relative rounded-xl md:rounded-[1.5rem] overflow-hidden border border-white/10 shadow-[0_0_50px_-10px_rgba(0,0,0,0.7)] bg-black z-10">
                  <VideoDemo 
-                    videoId="ew9yvthesh" 
+                    videoId="7511jnm0ng" 
                     thumbnailUrl="https://storage.googleapis.com/msgsndr/TGsyH70nsz7y3hijuqTn/media/6963c0c9c7683b678fa18494.webp" 
                  />
             </div>

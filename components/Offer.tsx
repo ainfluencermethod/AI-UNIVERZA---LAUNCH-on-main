@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Zap, ShieldCheck, Lock, Star, Quote, LayoutDashboard, MonitorPlay, Users, BookOpen } from 'lucide-react';
 import { CheckoutForm } from './CheckoutForm';
@@ -14,7 +15,7 @@ export const Offer: React.FC = () => {
           {/* Header */}
           <div className="text-center mb-12">
               <h2 className="font-serif text-4xl md:text-6xl text-black font-black italic mb-4">
-                  Pridružite se AI Univerzi
+                  Pridružite se AI Universi
               </h2>
           </div>
 
