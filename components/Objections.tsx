@@ -1,13 +1,13 @@
 
 import React, { useState } from 'react';
-import { Plus, Minus, BoxSelect, ScanFace, Calculator, Users } from 'lucide-react';
+import { Plus, Minus, MousePointer2, Ghost, Calculator, Users } from 'lucide-react';
 
 export const Objections: React.FC = () => {
   const [activeId, setActiveId] = useState<number | null>(0);
 
   const objections = [
-      { id: 0, icon: BoxSelect, title: "Nimam nobenih izkušenj", text: "Popolno. Manj izkušenj pomeni manj slabih navad. Naš sistem je 'Copy-Paste'. Če znaš slediti receptu za kuhanje, znaš slediti temu blueprintu." },
-      { id: 1, icon: ScanFace, title: "Sram me je snemati videe", text: "Nihče te ne bo videl. Celoten model temelji na AI ustvarjenih karakterjih ali 'faceless' videih. Tvoja anonimnost je 100% zagotovljena." },
+      { id: 0, icon: MousePointer2, title: "Nimam nobenih izkušenj", text: "Popolno. Manj izkušenj pomeni manj slabih navad. Naš sistem je 'Copy-Paste'. Če znaš slediti receptu za kuhanje, znaš slediti temu blueprintu." },
+      { id: 1, icon: Ghost, title: "Sram me je snemati videe", text: "Nihče te ne bo videl. Celoten model temelji na AI ustvarjenih karakterjih ali 'faceless' videih. Tvoja anonimnost je 100% zagotovljena." },
       { id: 2, icon: Calculator, title: "Nimam 497€ za investicijo", text: "Če bi naslednjih 6 mesecev delal 12 ur na dan in kupoval napačna orodja, da bi sam odkril ta sistem, bi zapravil bogastvo. 497€ je le 0,23€ na uro tvojega prihranjenega časa. To je bližnjica, ki ti prihrani pol leta življenja in denarja za neuporabne naročnine, poleg tega te pa pripravi, da si zagotoviš mesto med zmagovalci naslednjega desetletja." },
       { id: 3, icon: Users, title: "Ali je trg prenasičen?", text: "Smešno vprašanje. To je kot Bitcoin v letu 2017, smo v samem začetku AI revolucije. Kdor vstopi danes, je med prvimi na svetu." },
   ];
