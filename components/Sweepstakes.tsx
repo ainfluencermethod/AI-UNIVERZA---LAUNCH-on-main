@@ -15,6 +15,12 @@ export const Sweepstakes: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const handleRulesClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.history.pushState({}, '', '/?step=rules');
+    window.dispatchEvent(new PopStateEvent('popstate'));
+  };
+
   return (
     <div className="py-24 md:py-32 px-4 bg-black relative overflow-hidden border-t border-white/5">
       {/* Background Ambience */}
@@ -65,7 +71,6 @@ export const Sweepstakes: React.FC = () => {
                 
                 {/* Icon Container with Shimmer */}
                 <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#222] to-black border border-white/10 flex items-center justify-center mb-6 shadow-inner group-hover:scale-105 transition-transform duration-500 relative overflow-hidden p-4">
-                    {/* Shimmer Effect */}
                     <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out z-10"></div>
                     
                     <img 
@@ -87,12 +92,9 @@ export const Sweepstakes: React.FC = () => {
                     <Sparkles size={14} className="fill-black" /> Glavna Nagrada
                 </div>
                 
-                {/* Glow behind watch */}
                 <div className="absolute top-20 left-1/2 -translate-x-1/2 w-40 h-40 bg-[#FFD700]/10 blur-[50px] rounded-full pointer-events-none"></div>
 
-                {/* Icon Container with Shimmer */}
                 <div className="w-32 h-32 rounded-full bg-gradient-to-br from-[#1a1a1a] to-black border-2 border-[#FFD700]/20 flex items-center justify-center mb-8 shadow-2xl relative group-hover:border-[#FFD700] transition-colors duration-500 overflow-hidden">
-                    {/* Shimmer Effect */}
                     <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-[#FFD700]/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out z-10"></div>
                     
                     <img 
@@ -118,9 +120,7 @@ export const Sweepstakes: React.FC = () => {
                     NAGRADA #3
                 </div>
                 
-                {/* Icon Container with Shimmer */}
                 <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#222] to-black border border-white/10 flex items-center justify-center mb-6 shadow-inner group-hover:scale-105 transition-transform duration-500 relative overflow-hidden p-4">
-                    {/* Shimmer Effect */}
                     <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out z-10"></div>
 
                     <img 
@@ -158,10 +158,8 @@ export const Sweepstakes: React.FC = () => {
                          </p>
                     </div>
 
-                    {/* The Golden Ticket Visual */}
                     <div className="relative transform hover:scale-105 transition-transform duration-300 cursor-default">
                         <div className="bg-[#FFD700] w-64 h-32 rounded-lg flex flex-col items-center justify-center text-black relative shadow-[0_0_40px_-10px_rgba(255,215,0,0.5)] border-2 border-white/20 border-dashed">
-                             {/* Cutouts */}
                              <div className="absolute -left-3 top-1/2 -translate-y-1/2 w-6 h-6 bg-[#151515] rounded-full"></div>
                              <div className="absolute -right-3 top-1/2 -translate-y-1/2 w-6 h-6 bg-[#151515] rounded-full"></div>
                              
@@ -179,7 +177,7 @@ export const Sweepstakes: React.FC = () => {
 
             <div className="mt-12 pt-8 border-t border-white/5">
                  <p className="text-[10px] text-gray-600 uppercase leading-relaxed font-medium max-w-3xl mx-auto">
-                    "*** OMEJITEV 1 PRIJAVE NA OSEBO/E-NASLOV. *** NAKUP ALI KAKRŠNOKOLI PLAČILO NI POGOJ ZA SODELOVANJE ALI ZMAGO. NAKUP NE POVEČA VAŠIH MOŽNOSTI ZA ZMAGO. Nagradna igra »AI Univerza« je odprta le za fizične osebe s stalnim prebivališčem v Republiki Sloveniji, ki so starejše od 18 let. Nagradna igra ni veljavna izven Slovenije in kjer je to zakonsko prepovedano. Zaključi se dne 16.01.2026 Za sodelovanje veljajo celotna pravila in splošni pogoji, ki so na voljo na <a href="/?step=rules" className="underline hover:text-gray-400 transition-colors">aiuniverza.si/pravila</a>."
+                    "*** OMEJITEV 1 PRIJAVE NA OSEBO/E-NASLOV. *** NAKUP ALI KAKRŠNOKOLI PLAČILO NI POGOJ ZA SODELOVANJE ALI ZMAGO. NAKUP NE POVEČA VAŠIH MOŽNOSTI ZA ZMAGO. Nagradna igra »AI Univerza« je odprta le za fizične osebe s stalnim prebivališčem v Republiki Sloveniji, ki so starejše od 18 let. Nagradna igra ni veljavna izven Slovenije in kjer je to zakonsko prepovedano. Zaključi se dne 16.01.2026 Za sodelovanje veljajo celotna pravila in splošni pogoji, ki so na voljo na <button onClick={handleRulesClick} className="underline hover:text-gray-400 transition-colors uppercase cursor-pointer">aiuniverza.si/pravila</button>."
                  </p>
             </div>
         </div>

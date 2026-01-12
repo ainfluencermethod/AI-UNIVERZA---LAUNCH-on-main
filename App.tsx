@@ -33,39 +33,37 @@ const App: React.FC = () => {
   const [isMobileCheckoutOpen, setIsMobileCheckoutOpen] = useState(false);
 
   useEffect(() => {
-    // Check URL parameters/paths to detect state
-    const path = window.location.pathname;
-    const query = new URLSearchParams(window.location.search);
-    const step = query.get('step');
+    const handleUrlChange = () => {
+      const path = window.location.pathname;
+      const query = new URLSearchParams(window.location.search);
+      const step = query.get('step');
 
-    if (path === '/pravila' || step === 'rules') {
+      if (path === '/pravila' || step === 'rules') {
         setCurrentStep('rules');
-    } else if (path === '/zasebnost' || step === 'privacy') {
+      } else if (path === '/zasebnost' || step === 'privacy') {
         setCurrentStep('privacy');
-    } else if (path === '/pogoji' || step === 'terms') {
+      } else if (path === '/pogoji' || step === 'terms') {
         setCurrentStep('terms');
-    } else if (path === '/kontakt' || step === 'contact') {
+      } else if (path === '/kontakt' || step === 'contact') {
         setCurrentStep('contact');
-    } else if (step === 'upsell') {
-      setCurrentStep('upsell');
-    } else if (step === 'success') {
-      setCurrentStep('success');
-    } else {
-      setCurrentStep('landing');
-    }
-  }, [window.location.search]);
+      } else if (step === 'upsell') {
+        setCurrentStep('upsell');
+      } else if (step === 'success') {
+        setCurrentStep('success');
+      } else {
+        setCurrentStep('landing');
+      }
+    };
 
-  const safePushState = (path: string) => {
-    try {
-      window.history.pushState({}, '', path);
-    } catch (e) {
-      console.warn('History pushState failed (likely due to sandbox environment):', e);
-    }
-  };
+    handleUrlChange();
+    window.addEventListener('popstate', handleUrlChange);
+    return () => window.removeEventListener('popstate', handleUrlChange);
+  }, []);
 
   const navigateTo = (step: AppStep) => {
     setCurrentStep(step);
-    safePushState(`/?step=${step}`);
+    const url = step === 'landing' ? '/' : `/?step=${step}`;
+    window.history.pushState({}, '', url);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -74,8 +72,7 @@ const App: React.FC = () => {
   };
 
   const handleUpsellDecline = () => {
-    setCurrentStep('success');
-    safePushState('/?step=success');
+    navigateTo('success');
   };
 
   return (

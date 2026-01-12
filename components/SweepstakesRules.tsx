@@ -2,15 +2,21 @@ import React from 'react';
 import { ArrowLeft, Scale, ShieldCheck, Trophy, Gavel } from 'lucide-react';
 
 export const SweepstakesRules: React.FC = () => {
+  const handleBack = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.history.pushState({}, '', '/');
+    window.dispatchEvent(new PopStateEvent('popstate'));
+  };
+
   return (
     <div className="min-h-screen bg-black text-gray-300 font-sans p-6 md:p-12 relative selection:bg-brand-gold selection:text-black">
       <div className="max-w-4xl mx-auto">
         
         {/* Navigation */}
         <div className="mb-12">
-            <a href="/" className="inline-flex items-center gap-2 text-brand-gold hover:text-white transition-colors uppercase font-bold text-xs tracking-widest">
+            <button onClick={handleBack} className="inline-flex items-center gap-2 text-brand-gold hover:text-white transition-colors uppercase font-bold text-xs tracking-widest cursor-pointer">
                 <ArrowLeft size={16} /> Nazaj na domačo stran
-            </a>
+            </button>
         </div>
 
         {/* Header */}
