@@ -46,7 +46,9 @@ export const SupportAgent: React.FC = () => {
 
   const initChat = () => {
     if (!chatInstanceRef.current) {
-      const apiKey = process.env.API_KEY;
+      // Use safe access for process.env
+      const apiKey = typeof process !== 'undefined' ? process.env.API_KEY : undefined;
+      
       if (!apiKey || apiKey === "undefined") {
         console.warn("Gemini API Key is missing or invalid. AI chat will be unavailable.");
         return null;
