@@ -1,10 +1,10 @@
 
 import React, { useState, useEffect, useMemo } from 'react';
-import { AlertCircle, Zap } from 'lucide-react';
+import { AlertCircle, Clock } from 'lucide-react';
 
 interface CountdownTimerProps {
   targetDateStr?: string;
-  variant?: 'pill' | 'sticky';
+  variant?: 'pill' | 'sticky' | 'minimal';
 }
 
 export const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDateStr, variant = 'pill' }) => {
@@ -40,6 +40,31 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDateStr, v
 
   const isCritical = timeLeft.days === 0 && timeLeft.hours < 2;
 
+  if (variant === 'minimal') {
+      return (
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 bg-black/40 backdrop-blur-2xl border border-white/10 rounded-3xl py-6 px-10 md:px-14 shadow-[0_20px_50px_rgba(0,0,0,0.5)] group hover:border-brand-gold/20 transition-all duration-700">
+            {/* Left Label Section */}
+            <div className="flex items-center gap-3">
+                <Clock size={20} className="text-brand-gold/80 animate-pulse" />
+                <span className="text-brand-gold font-black text-xs md:text-sm uppercase tracking-[0.4em] whitespace-nowrap">
+                    ZAPIRAMO ČEZ:
+                </span>
+            </div>
+
+            {/* Timer Units Section */}
+            <div className="flex items-center gap-4 md:gap-8">
+                <TimeUnit value={timeLeft.days} label="D" minimal />
+                <Separator minimal />
+                <TimeUnit value={timeLeft.hours} label="H" minimal />
+                <Separator minimal />
+                <TimeUnit value={timeLeft.minutes} label="M" minimal />
+                <Separator minimal />
+                <TimeUnit value={timeLeft.seconds} label="S" isSeconds minimal />
+            </div>
+        </div>
+      );
+  }
+
   if (variant === 'sticky') {
       return (
         <div className="fixed top-0 left-0 right-0 z-[100] bg-black border-b border-white/10 backdrop-blur-xl flex items-center justify-center py-3 px-4 shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
@@ -56,7 +81,7 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDateStr, v
                     </span>
                 </div>
 
-                {/* Center: Digits (Styled as per screenshot) */}
+                {/* Center: Digits */}
                 <div className="flex items-center gap-2 md:gap-6">
                     <div className="flex items-center gap-3 md:gap-5">
                         <TimeUnit value={timeLeft.days} label="DNI" compact />
@@ -85,7 +110,6 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDateStr, v
 
   return (
     <div className={`flex flex-col md:flex-row items-center gap-4 bg-black/80 border ${isCritical ? 'border-red-500/30' : 'border-white/15'} rounded-3xl md:rounded-full p-4 md:pl-2 md:pr-6 md:py-2 backdrop-blur-xl shadow-2xl transition-all duration-300 group select-none relative overflow-hidden`}>
-      {/* Fallback for non-sticky usage remains mostly same but respects the new labeling */}
       <div className="flex items-center gap-4 w-full md:w-auto">
         <div className="relative flex items-center justify-center w-10 h-10 bg-red-500/10 rounded-full border border-red-500/20 shrink-0">
              <AlertCircle size={18} className="text-red-500 relative z-10" />
@@ -111,17 +135,17 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDateStr, v
   );
 };
 
-const TimeUnit = ({ value, label, isSeconds = false, compact = false }: { value: number, label: string, isSeconds?: boolean, compact?: boolean }) => (
-    <div className={`flex flex-col items-center transition-transform duration-300 ${compact ? 'min-w-[40px] md:min-w-[48px]' : 'w-[36px] md:w-[44px]'}`}>
-        <span className={`${compact ? 'text-2xl md:text-4xl' : 'text-2xl md:text-3xl'} font-black tabular-nums tracking-tighter ${isSeconds ? 'text-brand-gold' : 'text-white'}`}>
+const TimeUnit = ({ value, label, isSeconds = false, compact = false, minimal = false }: { value: number, label: string, isSeconds?: boolean, compact?: boolean, minimal?: boolean }) => (
+    <div className={`flex flex-col items-center transition-transform duration-300 ${minimal ? 'min-w-[40px] md:min-w-[60px]' : compact ? 'min-w-[32px] md:min-w-[40px]' : 'w-[36px] md:w-[44px]'}`}>
+        <span className={`${minimal ? 'text-4xl md:text-6xl' : compact ? 'text-2xl md:text-4xl' : 'text-2xl md:text-3xl'} font-black tabular-nums tracking-tighter ${isSeconds || (minimal && isSeconds) ? 'text-brand-gold' : 'text-white'} leading-none`}>
             {String(value).padStart(2, '0')}
         </span>
-        <span className={`${compact ? 'text-[8px] md:text-[10px]' : 'text-[8px]'} font-bold text-gray-500 uppercase tracking-widest mt-1`}>
+        <span className={`${minimal ? 'text-[9px] md:text-[11px]' : compact ? 'text-[8px] md:text-[10px]' : 'text-[8px]'} font-bold text-gray-500/60 uppercase tracking-[0.2em] mt-2`}>
             {label}
         </span>
     </div>
 );
 
-const Separator = () => (
-    <span className="text-gray-700 font-black text-xl md:text-2xl -mt-4 md:-mt-6 select-none opacity-50">:</span>
+const Separator = ({ minimal = false }: { minimal?: boolean }) => (
+    <span className={`${minimal ? 'text-white/10 text-2xl md:text-4xl -mt-6' : 'text-gray-700 text-xl md:text-2xl -mt-4 md:-mt-6'} font-black select-none`}>:</span>
 );

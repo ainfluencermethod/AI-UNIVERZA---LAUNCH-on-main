@@ -1,8 +1,7 @@
 
 import React from 'react';
-import { Zap, ShieldCheck, Lock, Star, Quote, LayoutDashboard, MonitorPlay, Users, BookOpen, Clock } from 'lucide-react';
+import { Zap, ShieldCheck, Lock, Star, Quote, LayoutDashboard, MonitorPlay, Users, BookOpen } from 'lucide-react';
 import { CheckoutForm } from './CheckoutForm';
-import { CountdownTimer } from './CountdownTimer';
 
 export const Offer: React.FC = () => {
   return (
@@ -13,18 +12,9 @@ export const Offer: React.FC = () => {
 
        <div className="max-w-7xl mx-auto relative z-10">
           
-          {/* Header & Urgent Timer */}
+          {/* Header */}
           <div className="text-center mb-12 flex flex-col items-center">
-              <div className="mb-8 transform hover:scale-105 transition-transform duration-500">
-                  <div className="bg-black text-white px-6 py-2 rounded-t-2xl font-black text-[10px] tracking-[0.3em] uppercase inline-block border-x border-t border-black/10">
-                      PONUDBA POTEČE ČEZ:
-                  </div>
-                  <div className="bg-white/90 backdrop-blur-md border-2 border-black rounded-2xl p-4 md:p-6 shadow-[0_20px_40px_-10px_rgba(0,0,0,0.3)]">
-                      <CountdownTimer variant="pill" />
-                  </div>
-              </div>
-
-              <h2 className="font-serif text-4xl md:text-6xl text-black font-black italic mb-4">
+              <h2 className="font-serif text-4xl md:text-6xl text-black font-black italic mb-6">
                   Pridružite se AI Universi
               </h2>
           </div>
@@ -37,14 +27,14 @@ export const Offer: React.FC = () => {
                   
                   <div>
                     <h2 className="text-2xl md:text-3xl font-black text-black mb-8 flex items-center gap-3 uppercase tracking-tighter">
-                        <Zap className="fill-black w-6 h-6" />
+                        < Zap className="fill-black w-6 h-6" />
                         TVOJA BLIŽNJICA DO USPEHA:
                     </h2>
 
                     <div className="space-y-4 mb-8">
                         {/* Stack Item 1 */}
-                        <div className="flex gap-4 p-4 rounded-2xl border border-gray-100 shadow-sm bg-gray-50 hover:bg-white hover:shadow-md transition-all">
-                            <div className="w-12 h-12 bg-black rounded-lg flex items-center justify-center shrink-0">
+                        <div className="flex gap-4 p-4 rounded-2xl border border-gray-100 shadow-sm bg-gray-50 hover:bg-white hover:shadow-md transition-all group/item">
+                            <div className="w-12 h-12 bg-black rounded-lg flex items-center justify-center shrink-0 group-hover/item:scale-110 transition-transform">
                                 <BookOpen className="text-white w-6 h-6" />
                             </div>
                             <div className="flex-1">
@@ -57,8 +47,8 @@ export const Offer: React.FC = () => {
                         </div>
 
                         {/* Stack Item 2 */}
-                        <div className="flex gap-4 p-4 rounded-2xl border border-gray-100 shadow-sm bg-gray-50 hover:bg-white hover:shadow-md transition-all">
-                             <div className="w-12 h-12 bg-black rounded-lg flex items-center justify-center shrink-0">
+                        <div className="flex gap-4 p-4 rounded-2xl border border-gray-100 shadow-sm bg-gray-50 hover:bg-white hover:shadow-md transition-all group/item">
+                             <div className="w-12 h-12 bg-black rounded-lg flex items-center justify-center shrink-0 group-hover/item:scale-110 transition-transform">
                                 <LayoutDashboard className="text-white w-6 h-6" />
                             </div>
                             <div className="flex-1">
@@ -71,8 +61,8 @@ export const Offer: React.FC = () => {
                         </div>
 
                         {/* Stack Item 3 */}
-                        <div className="flex gap-4 p-4 rounded-2xl border border-gray-100 shadow-sm bg-gray-50 hover:bg-white hover:shadow-md transition-all">
-                             <div className="w-12 h-12 bg-black rounded-lg flex items-center justify-center shrink-0">
+                        <div className="flex gap-4 p-4 rounded-2xl border border-gray-100 shadow-sm bg-gray-50 hover:bg-white hover:shadow-md transition-all group/item">
+                             <div className="w-12 h-12 bg-black rounded-lg flex items-center justify-center shrink-0 group-hover/item:scale-110 transition-transform">
                                 <Users className="text-white w-6 h-6" />
                             </div>
                             <div className="flex-1">
@@ -85,8 +75,8 @@ export const Offer: React.FC = () => {
                         </div>
                         
                          {/* Stack Item 4 */}
-                        <div className="flex gap-4 p-4 rounded-2xl border border-gray-100 shadow-sm bg-gray-50 hover:bg-white hover:shadow-md transition-all">
-                             <div className="w-12 h-12 bg-black rounded-lg flex items-center justify-center shrink-0">
+                        <div className="flex gap-4 p-4 rounded-2xl border border-gray-100 shadow-sm bg-gray-50 hover:bg-white hover:shadow-md transition-all group/item">
+                             <div className="w-12 h-12 bg-black rounded-lg flex items-center justify-center shrink-0 group-hover/item:scale-110 transition-transform">
                                 <MonitorPlay className="text-white w-6 h-6" />
                             </div>
                             <div className="flex-1">
@@ -100,9 +90,9 @@ export const Offer: React.FC = () => {
 
 
                         {/* Bonus Item */}
-                        <div className="flex gap-4 p-4 rounded-2xl border-2 border-brand-gold bg-[#fffde7] shadow-lg transform hover:scale-[1.01] transition-transform relative overflow-hidden">
+                        <div className="flex gap-4 p-4 rounded-2xl border-2 border-brand-gold bg-[#fffde7] shadow-lg transform hover:scale-[1.01] transition-transform relative overflow-hidden group/bonus">
                              <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-brand-gold/20 to-transparent rounded-bl-full -mr-4 -mt-4"></div>
-                             <div className="w-12 h-12 bg-brand-gold rounded-lg flex items-center justify-center shrink-0 shadow-sm">
+                             <div className="w-12 h-12 bg-brand-gold rounded-lg flex items-center justify-center shrink-0 shadow-sm group-hover/bonus:scale-110 transition-transform">
                                 <Star className="text-black w-6 h-6 fill-black" />
                             </div>
                              <div className="flex-1 relative z-10">
@@ -128,55 +118,31 @@ export const Offer: React.FC = () => {
                                 <div className="flex text-yellow-500 mb-1">
                                     <Star size={14} fill="currentColor" /><Star size={14} fill="currentColor" /><Star size={14} fill="currentColor" /><Star size={14} fill="currentColor" /><Star size={14} fill="currentColor" />
                                 </div>
-                                <p className="text-gray-700 text-sm font-medium italic mb-2">
-                                    "Iskreno, bil sem skeptičen glede cene. Ampak v prvem tednu sem z enim samim videom pokril celotno investicijo. Zdaj delam 2k/teden. Hvala ekipa!"
+                                <p className="text-gray-700 text-sm font-medium italic leading-relaxed">
+                                    "Najboljša investicija v letu 2026. Sistemi so jasni, skupnost pa izjemna."
                                 </p>
-                                <p className="text-xs text-gray-500 font-bold uppercase">- Marko Z., Maribor</p>
+                                <span className="text-[10px] font-black uppercase tracking-widest text-gray-400 mt-2 block">- Marko K., Ljubljana</span>
                             </div>
                         </div>
                   </div>
 
-                  <div>
-                    {/* Price Anchor */}
-                    <div className="flex items-end justify-between border-t-2 border-gray-100 pt-8 mb-8">
-                        <div>
-                            <p className="text-gray-400 font-bold text-xs uppercase tracking-wide mb-1">Skupna Vrednost</p>
-                            <p className="text-2xl font-bold text-gray-300 line-through decoration-red-500 decoration-2">6.182€</p>
-                        </div>
-                        <div className="text-right">
-                            <div className="flex items-baseline justify-end gap-1">
-                                <p className="text-6xl font-black text-[#00B67A] tracking-tighter leading-none shadow-green-200 drop-shadow-sm">497€</p>
-                                <p className="text-xs text-gray-400 font-bold uppercase mb-1">/ leto</p>
-                            </div>
-                        </div>
-                    </div>
+                  <div className="flex items-center justify-between opacity-50 px-2">
+                       <div className="flex items-center gap-2 text-gray-600 text-xs font-bold uppercase tracking-widest">
+                           <ShieldCheck size={16} /> 100% Secure
+                       </div>
+                       <div className="flex items-center gap-2 text-gray-600 text-xs font-bold uppercase tracking-widest">
+                           <Lock size={16} /> Encryption
+                       </div>
                   </div>
               </div>
 
-              {/* RIGHT SIDE - Pricing Card */}
-              <div className="lg:w-2/5 bg-black p-0 relative overflow-hidden flex flex-col justify-center border-l-4 border-black py-12 lg:py-0 lg:min-h-[800px]">
-                  {/* Decorative Elements for Black Side */}
-                  <div className="absolute top-0 right-0 w-64 h-64 bg-brand-gold/10 blur-[80px] rounded-full pointer-events-none"></div>
-                  <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 blur-[80px] rounded-full pointer-events-none"></div>
-                  
-                  <div className="relative z-10 h-full flex flex-col justify-center">
-                      <CheckoutForm />
-                  </div>
+              {/* RIGHT SIDE - Pricing & Form */}
+              <div className="lg:w-2/5 bg-gray-50 border-l border-gray-100 flex flex-col items-center justify-center py-12">
+                  <CheckoutForm />
               </div>
+
           </div>
-          
-          {/* Trust Indicators below card */}
-          <div className="mt-8 flex justify-center items-center gap-6 text-black/60 mix-blend-multiply">
-              <div className="flex items-center gap-2">
-                  <Lock size={14} />
-                  <span className="text-xs font-bold uppercase tracking-widest">SSL Secure Payment</span>
-              </div>
-              <div className="h-4 w-px bg-black/20"></div>
-              <div className="flex gap-3 grayscale opacity-70">
-                   <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" className="h-4" alt="Mastercard" />
-                   <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" className="h-4" alt="Visa" />
-              </div>
-          </div>
+
        </div>
     </section>
   );

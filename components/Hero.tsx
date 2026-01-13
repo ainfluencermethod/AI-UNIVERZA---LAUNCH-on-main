@@ -36,8 +36,8 @@ export const Hero: React.FC = () => {
         </div>
 
         {/* 1. Headline - Refined for high impact */}
-        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-sans font-black text-white leading-[0.95] mb-8 tracking-tighter drop-shadow-2xl max-w-6xl mx-auto animate-fade-in-up text-center px-4" style={{ animationDelay: '100ms' }}>
-          30 Dni, da <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#B38728] italic pr-2 inline-block">Kopiraš Moj AI Sistem</span> in Začneš <span className="text-white underline decoration-brand-gold/50 underline-offset-8 decoration-4">Ustvarjati Dohodek</span> v 2026
+        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-sans font-black text-white leading-[0.95] mb-6 tracking-tighter drop-shadow-2xl max-w-6xl mx-auto animate-fade-in-up text-center px-4" style={{ animationDelay: '100ms' }}>
+          30 Dni, da <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#B38728] italic pr-2 inline-block">Kopiraš Moj AI Sistem</span> in Začneš <span className="text-white underline decoration-brand-gold/50 underline-offset-8 decoration-4 text-nowrap">Ustvarjati Dohodek</span> v 2026
         </h1>
 
         {/* 2. Subheadline */}
