@@ -27,7 +27,6 @@ import { CountdownTimer } from './components/CountdownTimer';
 import { Button } from './components/Button';
 import { CheckoutForm } from './components/CheckoutForm';
 import { CookieConsent } from './components/CookieConsent';
-import { SupportAgent } from './components/SupportAgent';
 
 type AppStep = 'landing' | 'upsell' | 'success' | 'rules' | 'privacy' | 'terms' | 'contact';
 
@@ -81,7 +80,6 @@ const App: React.FC = () => {
   return (
     <>
       <CookieConsent />
-      <SupportAgent />
       
       {currentStep === 'rules' && <SweepstakesRules />}
       {currentStep === 'privacy' && <PrivacyPolicy />}
