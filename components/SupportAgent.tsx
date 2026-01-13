@@ -46,26 +46,14 @@ export const SupportAgent: React.FC = () => {
 
   const initChat = () => {
     if (!chatInstanceRef.current) {
-      const apiKey = process.env.API_KEY;
-      
-      // Ensure we have a non-empty, non-literal "undefined" string
-      if (!apiKey || apiKey === "undefined" || apiKey.trim() === "") {
-        console.warn("Gemini API Key is missing or invalid. AI chat will be unavailable.");
-        return null;
-      }
-
-      try {
-        const ai = new GoogleGenAI({ apiKey });
-        chatInstanceRef.current = ai.chats.create({
-          model: 'gemini-3-flash-preview',
-          config: {
-            systemInstruction: SYSTEM_INSTRUCTION,
-          },
-        });
-      } catch (err) {
-        console.error("Failed to initialize Gemini AI:", err);
-        return null;
-      }
+      // Direct initialization as per coding guidelines
+      const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+      chatInstanceRef.current = ai.chats.create({
+        model: 'gemini-3-flash-preview',
+        config: {
+          systemInstruction: SYSTEM_INSTRUCTION,
+        },
+      });
     }
     return chatInstanceRef.current;
   };
@@ -76,16 +64,6 @@ export const SupportAgent: React.FC = () => {
     const userMessage = input.trim();
     const chat = initChat();
     
-    if (!chat) {
-      setMessages(prev => [
-        ...prev, 
-        { role: 'user', text: userMessage }, 
-        { role: 'model', text: "Oprostite, trenutno ne morem vzpostaviti povezave z AI strežnikom. Pišite nam na pici@aiuniverza.si." }
-      ]);
-      setInput('');
-      return;
-    }
-
     setInput('');
     setMessages(prev => [...prev, { role: 'user', text: userMessage }]);
     setIsLoading(true);
@@ -107,7 +85,7 @@ export const SupportAgent: React.FC = () => {
       {/* Floating Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-28 md:bottom-8 right-4 md:right-8 z-[90] bg-brand-gold text-white p-4 rounded-full shadow-[0_10px_40px_rgba(255,0,0,0.4)] hover:scale-110 active:scale-95 transition-all duration-300 group border border-white/20"
+        className="fixed bottom-28 md:bottom-8 right-4 md:right-8 z-[90] bg-brand-gold text-white p-4 rounded-full shadow-[0_10px_40px_rgba(212,175,55,0.4)] hover:scale-110 active:scale-95 transition-all duration-300 group border border-white/20"
       >
         {isOpen ? <X size={28} /> : <MessageCircle size={28} className="group-hover:rotate-12 transition-transform" />}
         {!isOpen && (
@@ -122,7 +100,7 @@ export const SupportAgent: React.FC = () => {
       {isOpen && (
         <div className="fixed bottom-44 md:bottom-28 right-4 md:right-8 w-[calc(100vw-2rem)] md:w-[400px] h-[500px] bg-[#0a0a0a] border border-white/10 rounded-3xl shadow-2xl z-[90] flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-10 duration-300 backdrop-blur-xl">
           {/* Header */}
-          <div className="bg-gradient-to-r from-brand-gold to-red-800 p-4 flex items-center justify-between shadow-lg">
+          <div className="bg-gradient-to-r from-brand-gold to-brand-blue p-4 flex items-center justify-between shadow-lg">
             <div className="flex items-center gap-3">
               <div className="bg-black/20 p-2 rounded-xl">
                 <Bot size={20} className="text-white" />
