@@ -36,45 +36,67 @@ export const SupportAgent: React.FC = () => {
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const chatContainerRef = useRef<HTMLDivElement>(null);
-  const chatInstanceRef = useRef<any>(null);
 
   useEffect(() => {
     if (chatContainerRef.current) {
       chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
     }
-  }, [messages]);
-
-  const initChat = () => {
-    if (!chatInstanceRef.current) {
-      // Direct initialization as per coding guidelines
-      const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-      chatInstanceRef.current = ai.chats.create({
-        model: 'gemini-3-flash-preview',
-        config: {
-          systemInstruction: SYSTEM_INSTRUCTION,
-        },
-      });
-    }
-    return chatInstanceRef.current;
-  };
+  }, [messages, isLoading]);
 
   const handleSend = async () => {
-    if (!input.trim() || isLoading) return;
-
     const userMessage = input.trim();
-    const chat = initChat();
-    
+    if (!userMessage || isLoading) return;
+
+    // 1. Update UI with user message
     setInput('');
-    setMessages(prev => [...prev, { role: 'user', text: userMessage }]);
+    const newMessages: Message[] = [...messages, { role: 'user', text: userMessage }];
+    setMessages(newMessages);
     setIsLoading(true);
 
     try {
-      const response = await chat.sendMessage({ message: userMessage });
-      const modelText = response.text || "Prišlo je do napake. Piši nam na pici@aiuniverza.si.";
+      // 2. Initialize AI
+      const apiKey = process.env.API_KEY;
+      if (!apiKey) {
+        throw new Error("API Key is missing from the environment.");
+      }
+
+      const ai = new GoogleGenAI({ apiKey });
+      
+      // 3. Prepare contents with history (Gemini format)
+      // We map our messages to the API's expected format: { role: 'user'|'model', parts: [{ text: '...' }] }
+      const contents = newMessages.map(msg => ({
+        role: msg.role,
+        parts: [{ text: msg.text }]
+      }));
+
+      // 4. Generate Response using the core generateContent method
+      const response = await ai.models.generateContent({
+        model: 'gemini-3-flash-preview',
+        contents: contents,
+        config: {
+          systemInstruction: SYSTEM_INSTRUCTION,
+          temperature: 0.7,
+          topP: 0.9,
+          topK: 40,
+        },
+      });
+
+      // 5. Extract and Validate Text Output
+      const modelText = response.text;
+      
+      if (!modelText) {
+        throw new Error("AI returned an empty or invalid response.");
+      }
+
       setMessages(prev => [...prev, { role: 'model', text: modelText }]);
-    } catch (error) {
-      console.error("AI Support Error:", error);
-      setMessages(prev => [...prev, { role: 'model', text: "Imam tehnične težave. Piši nam na pici@aiuniverza.si." }]);
+    } catch (error: any) {
+      console.error("AI Support Error Details:", error);
+      
+      const errorMessage = error?.message?.includes("API_KEY") 
+        ? "Tehnična napaka: API ključ ni nastavljen." 
+        : "Oprosti, trenutno imam težave s povezavo. Piši nam na pici@aiuniverza.si.";
+      
+      setMessages(prev => [...prev, { role: 'model', text: errorMessage }]);
     } finally {
       setIsLoading(false);
     }
@@ -86,10 +108,11 @@ export const SupportAgent: React.FC = () => {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="fixed bottom-28 md:bottom-8 right-4 md:right-8 z-[90] bg-brand-gold text-white p-4 rounded-full shadow-[0_10px_40px_rgba(212,175,55,0.4)] hover:scale-110 active:scale-95 transition-all duration-300 group border border-white/20"
+        aria-label="Podpora v živo"
       >
         {isOpen ? <X size={28} /> : <MessageCircle size={28} className="group-hover:rotate-12 transition-transform" />}
         {!isOpen && (
-          <span className="absolute -top-2 -right-1 flex h-4 w-4">
+          <span className="absolute -top-1 -right-1 flex h-4 w-4">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-4 w-4 bg-red-600"></span>
           </span>
@@ -98,40 +121,41 @@ export const SupportAgent: React.FC = () => {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-44 md:bottom-28 right-4 md:right-8 w-[calc(100vw-2rem)] md:w-[400px] h-[500px] bg-[#0a0a0a] border border-white/10 rounded-3xl shadow-2xl z-[90] flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-10 duration-300 backdrop-blur-xl">
+        <div className="fixed bottom-44 md:bottom-28 right-4 md:right-8 w-[calc(100vw-2rem)] md:w-[400px] h-[550px] max-h-[70vh] bg-[#0a0a0a] border border-white/10 rounded-3xl shadow-2xl z-[90] flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-10 duration-300 backdrop-blur-xl">
           {/* Header */}
-          <div className="bg-gradient-to-r from-brand-gold to-brand-blue p-4 flex items-center justify-between shadow-lg">
+          <div className="bg-gradient-to-r from-brand-gold to-brand-blue p-5 flex items-center justify-between shadow-lg">
             <div className="flex items-center gap-3">
-              <div className="bg-black/20 p-2 rounded-xl">
+              <div className="bg-black/20 p-2 rounded-xl border border-white/10">
                 <Bot size={20} className="text-white" />
               </div>
               <div>
-                <h4 className="text-white font-black text-sm uppercase tracking-wider">AI Podpora</h4>
+                <h4 className="text-white font-black text-xs uppercase tracking-wider leading-none mb-1">AI Podpora</h4>
                 <div className="flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span>
-                  <span className="text-white/70 text-[10px] font-bold uppercase tracking-widest">Aktivno</span>
+                  <span className="text-white/70 text-[9px] font-bold uppercase tracking-widest">Aktivno</span>
                 </div>
               </div>
             </div>
-            <button onClick={() => setIsOpen(false)} className="text-white/50 hover:text-white transition-colors">
+            <button onClick={() => setIsOpen(false)} className="text-white/50 hover:text-white transition-colors p-1">
               <X size={20} />
             </button>
           </div>
 
-          {/* Messages */}
+          {/* Messages Area */}
           <div 
             ref={chatContainerRef}
             className="flex-1 overflow-y-auto p-4 space-y-4 scroll-smooth"
+            style={{ scrollbarWidth: 'thin', scrollbarColor: '#333 transparent' }}
           >
             {messages.map((msg, i) => (
-              <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+              <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'} animate-in fade-in slide-in-from-bottom-2 duration-300`}>
                 <div className={`flex gap-2 max-w-[85%] ${msg.role === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>
                   <div className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center border border-white/10 ${msg.role === 'user' ? 'bg-white/5' : 'bg-brand-gold/10'}`}>
                     {msg.role === 'user' ? <User size={14} className="text-gray-400" /> : <Bot size={14} className="text-brand-gold" />}
                   </div>
                   <div className={`p-3 rounded-2xl text-sm leading-relaxed ${
                     msg.role === 'user' 
-                      ? 'bg-brand-gold text-white font-bold rounded-tr-none' 
+                      ? 'bg-brand-gold text-white font-bold rounded-tr-none shadow-lg' 
                       : 'bg-white/5 text-gray-300 border border-white/5 rounded-tl-none'
                   }`}>
                     {msg.text}
@@ -141,38 +165,52 @@ export const SupportAgent: React.FC = () => {
             ))}
             {isLoading && (
               <div className="flex justify-start">
-                <div className="bg-white/5 border border-white/5 p-3 rounded-2xl rounded-tl-none flex items-center gap-2">
-                  <Loader2 size={16} className="text-brand-gold animate-spin" />
-                  <span className="text-gray-500 text-xs italic">Razmišljam...</span>
+                <div className="flex gap-2 max-w-[85%]">
+                  <div className="shrink-0 w-8 h-8 rounded-full bg-brand-gold/10 flex items-center justify-center border border-white/10">
+                    <Loader2 size={14} className="text-brand-gold animate-spin" />
+                  </div>
+                  <div className="bg-white/5 border border-white/5 p-3 rounded-2xl rounded-tl-none flex items-center gap-2">
+                    <div className="flex gap-1">
+                      <span className="w-1.5 h-1.5 bg-brand-gold/50 rounded-full animate-bounce"></span>
+                      <span className="w-1.5 h-1.5 bg-brand-gold/50 rounded-full animate-bounce [animation-delay:0.2s]"></span>
+                      <span className="w-1.5 h-1.5 bg-brand-gold/50 rounded-full animate-bounce [animation-delay:0.4s]"></span>
+                    </div>
+                  </div>
                 </div>
               </div>
             )}
           </div>
 
-          {/* Input */}
-          <div className="p-4 border-t border-white/5 bg-black/50">
+          {/* Input Area */}
+          <div className="p-4 border-t border-white/5 bg-black/50 backdrop-blur-md">
             <div className="relative">
               <input
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={(e) => e.key === 'Enter' && handleSend()}
-                placeholder="Vprašaj karkoli..."
-                className="w-full bg-white/5 border border-white/10 rounded-xl py-3 pl-4 pr-12 text-sm text-white focus:outline-none focus:border-brand-gold/50 transition-colors placeholder:text-gray-600"
+                placeholder="Vprašaj o AI Universi..."
+                className="w-full bg-white/5 border border-white/10 rounded-xl py-3.5 pl-4 pr-12 text-sm text-white focus:outline-none focus:border-brand-gold/50 transition-all placeholder:text-gray-600 shadow-inner"
               />
               <button
                 onClick={handleSend}
                 disabled={!input.trim() || isLoading}
-                className={`absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-lg transition-all ${
-                  input.trim() && !isLoading ? 'text-brand-gold hover:bg-brand-gold/10' : 'text-gray-600'
+                className={`absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-lg transition-all duration-300 ${
+                  input.trim() && !isLoading ? 'text-brand-gold bg-brand-gold/10 hover:bg-brand-gold/20' : 'text-gray-600'
                 }`}
+                aria-label="Pošlji sporočilo"
               >
                 <Send size={18} />
               </button>
             </div>
-            <p className="text-[9px] text-gray-700 mt-2 text-center uppercase tracking-widest font-bold">
-              AI Universa Agent • Powered by Gemini
-            </p>
+            <div className="flex items-center justify-between mt-3 px-1">
+               <p className="text-[9px] text-gray-700 uppercase tracking-widest font-bold">
+                  AI Agent • Gemini
+               </p>
+               <a href="mailto:pici@aiuniverza.si" className="text-[9px] text-brand-gold/50 hover:text-brand-gold transition-colors uppercase tracking-widest font-bold">
+                  Email Podpora
+               </a>
+            </div>
           </div>
         </div>
       )}
