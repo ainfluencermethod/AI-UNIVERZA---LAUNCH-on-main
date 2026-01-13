@@ -28,6 +28,9 @@ import { Button } from './components/Button';
 import { CheckoutForm } from './components/CheckoutForm';
 import { CookieConsent } from './components/CookieConsent';
 import { SupportAgent } from './components/SupportAgent';
+import { HowItWorks } from './components/HowItWorks';
+import { Comparison } from './components/Comparison';
+import { FuturePositioning } from './components/FuturePositioning';
 
 type AppStep = 'landing' | 'upsell' | 'success' | 'rules' | 'privacy' | 'terms' | 'contact';
 
@@ -135,6 +138,10 @@ const App: React.FC = () => {
               </ScrollReveal>
 
               <ScrollReveal>
+                  <HowItWorks />
+              </ScrollReveal>
+
+              <ScrollReveal>
                   <Objections />
               </ScrollReveal>
               
@@ -143,11 +150,19 @@ const App: React.FC = () => {
               </ScrollReveal>
 
               <ScrollReveal>
+                  <Comparison />
+              </ScrollReveal>
+
+              <ScrollReveal>
                   <Paths />
               </ScrollReveal>
               
               <ScrollReveal>
                   <Challenge />
+              </ScrollReveal>
+
+              <ScrollReveal>
+                  <FuturePositioning />
               </ScrollReveal>
 
               <ScrollReveal>
