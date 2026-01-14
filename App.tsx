@@ -108,12 +108,12 @@ const App: React.FC = () => {
               </ScrollReveal>
               
               <ScrollReveal delay={0} duration={1000} yOffset={40} threshold={0.2}>
-                  <div className="py-12 text-center max-w-4xl mx-auto px-6">
-                      <p className="text-xl md:text-2xl text-gray-300 leading-relaxed font-light font-serif italic">
+                  <div className="py-8 md:py-12 text-center max-w-4xl mx-auto px-6">
+                      <p className="text-lg md:text-2xl text-gray-300 leading-relaxed font-light font-serif italic">
                           To so strategije, ki jih uporabljajo <span className="text-white font-bold">digitalni ustvarjalci</span> za gradnjo vplivnih AI blagovnih znamk in
-                          <span className="text-white font-bold border-b border-brand-gold not-italic font-sans"> doseganje izjemnih rezultatov na socialnih omrežjih.</span>
+                          <span className="text-white font-bold border-b border-brand-gold not-italic font-sans"> doseganje izjemnih rezultatov.</span>
                       </p>
-                      <p className="text-gray-500 mt-6 text-sm font-bold uppercase tracking-wide font-sans">
+                      <p className="text-gray-600 mt-4 text-[10px] md:text-sm font-bold uppercase tracking-widest font-sans">
                           Izobraževalni program prilagojen ambicioznim začetnikom.
                       </p>
                   </div>
@@ -167,42 +167,40 @@ const App: React.FC = () => {
                   <FAQ />
               </ScrollReveal>
 
-              <footer className="text-center py-16 text-gray-600 text-[10px] md:text-xs bg-black border-t border-gray-900 relative z-10 px-4">
-                  <div className="max-w-4xl mx-auto mb-10 leading-relaxed opacity-60">
-                      <p className="font-bold text-gray-500 uppercase tracking-widest mb-3">Izjava o omejitvi odgovornosti in rezultatih</p>
-                      <p className="mb-4">
-                          Rezultati, prikazani na tej spletni strani, so primeri izjemnih dosežkov in rasti naših najuspešnejših študentov. Ti rezultati <strong className="text-gray-400">niso tipični</strong> in ne zagotavljajo, da boste dosegli enake ali podobne finančne izide. Uspeh v programu AI Universa je v celoti odvisen od vašega individualnega truda, predanosti, časa, ki ga namenite učenju, ter natančnega izvajanja naučenih strategij.
-                      </p>
-                      <p>
-                          Vsak posameznik vstopa v program z različnim predznanjem i delovno etiko, zato so <strong className="text-gray-400">vsi rezultati odvisni od vašega dela</strong>. Pridružitev programu ne pomeni avtomatskega zaslužka; gre za izobraževalni program za pridobivanje veščin digitalnega marketinga in uporabe AI.
+              <footer className="text-center py-12 text-gray-600 text-[9px] md:text-xs bg-black border-t border-gray-900 relative z-10 px-4">
+                  <div className="max-w-4xl mx-auto mb-8 leading-relaxed opacity-60">
+                      <p className="font-bold text-gray-500 uppercase tracking-widest mb-2">Omejitev odgovornosti</p>
+                      <p className="mb-2">
+                          Rezultati so primeri izjemnih dosežkov. Ti rezultati <strong className="text-gray-400">niso tipični</strong> in ne zagotavljajo finančnih izidov. Uspeh je odvisen od vašega truda in izvajanja strategij.
                       </p>
                   </div>
 
                   <p className="mb-4">© 2026 AI Universa.</p>
-                  <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 underline mb-4">
-                      <button onClick={() => navigateTo('terms')} className="hover:text-brand-gold transition-colors">Splošni pogoji</button>
-                      <button onClick={() => navigateTo('rules')} className="hover:text-brand-gold transition-colors">Pravila igre</button>
+                  <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 underline mb-4 opacity-50">
+                      <button onClick={() => navigateTo('terms')} className="hover:text-brand-gold transition-colors">Pogoji</button>
+                      <button onClick={() => navigateTo('rules')} className="hover:text-brand-gold transition-colors">Pravila</button>
                       <button onClick={() => navigateTo('privacy')} className="hover:text-brand-gold transition-colors">Zasebnost</button>
                       <button onClick={() => navigateTo('contact')} className="hover:text-brand-gold transition-colors">Kontakt</button>
                   </div>
               </footer>
 
-              {/* Sticky Bottom CTA for Mobile */}
-              <div className="fixed bottom-0 left-0 right-0 z-[80] p-4 bg-black/95 backdrop-blur-xl border-t border-white/10 md:hidden animate-in slide-in-from-bottom duration-500 pb-8 safe-area-pb shadow-[0_-10px_40px_rgba(0,0,0,0.8)]">
-                  <div className="flex items-center gap-4">
-                      <div className="flex-1">
-                          <p className="text-red-500 text-[10px] font-black uppercase tracking-wider mb-0.5 flex items-center gap-1 animate-pulse">
+              {/* Sticky Bottom CTA for Mobile - Matches reference image style */}
+              <div className="fixed bottom-0 left-0 right-0 z-[80] px-4 py-3 bg-black/95 backdrop-blur-xl border-t border-white/10 md:hidden animate-in slide-in-from-bottom duration-500 pb-10 safe-area-pb shadow-[0_-10px_40px_rgba(0,0,0,0.8)]">
+                  <div className="flex items-center justify-between gap-4 max-w-sm mx-auto">
+                      <div className="flex flex-col">
+                          <p className="text-red-500 text-[8px] font-black uppercase tracking-widest mb-0.5 flex items-center gap-1 animate-pulse">
                               <span className="w-1.5 h-1.5 rounded-full bg-red-500"></span> 
                               OMEJENA MESTA!
                           </p>
-                          <div className="flex items-baseline gap-2">
-                              <span className="text-brand-gold font-black text-xl">497€<span className="text-xs font-normal text-white/60 ml-1">/ leto</span></span>
-                              <span className="text-gray-600 text-xs line-through decoration-red-500 decoration-2">6.182€</span>
+                          <div className="flex items-center gap-2">
+                              <span className="text-brand-gold font-black text-lg leading-none">497€<span className="text-[10px] font-normal text-white/50 ml-1">/ leto</span></span>
+                              <span className="text-gray-600 text-[10px] line-through decoration-red-500 decoration-1">6.182€</span>
                           </div>
                       </div>
                       <Button 
                           onClick={() => setIsMobileCheckoutOpen(true)} 
-                          className="!py-3 !px-4 !text-sm w-auto shrink-0 shadow-lg"
+                          className="!py-2.5 !px-6 !text-xs !rounded-xl w-auto shrink-0 shadow-lg border-t border-white/20"
+                          autoShimmer
                       >
                           PRIDRUŽI SE
                       </Button>
@@ -216,11 +214,11 @@ const App: React.FC = () => {
                       <div className="bg-[#0a0a0a] border-t border-white/10 rounded-t-3xl w-full p-6 animate-in slide-in-from-bottom duration-300 relative max-h-[90vh] overflow-y-auto">
                           <button 
                               onClick={() => setIsMobileCheckoutOpen(false)}
-                              className="absolute top-4 right-4 p-2 bg-white/10 rounded-full text-white"
+                              className="absolute top-4 right-4 p-2 bg-white/10 rounded-full text-white z-50"
                           >
                               <X size={20} />
                           </button>
-                          <div className="pt-2">
+                          <div className="pt-4">
                               <CheckoutForm />
                           </div>
                       </div>

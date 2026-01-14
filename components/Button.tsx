@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 
@@ -31,16 +30,16 @@ export const Button: React.FC<ButtonProps> = ({
     ${fullWidth ? 'w-full' : ''}
   `;
 
-  // Premium Gold Metallic Style
+  // Premium Gold Metallic Style - Refined with more layers
   const primaryClasses = `
-    bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#B38728]
+    bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] via-[#D4AF37] to-[#B38728]
     bg-[length:200%_auto]
     text-black
-    border border-white/20
-    shadow-[0_0_20px_rgba(212,175,55,0.3)]
-    hover:shadow-[0_0_35px_rgba(212,175,55,0.6)]
+    border border-white/30
+    shadow-[0_15px_35px_-5px_rgba(212,175,55,0.4)]
+    hover:shadow-[0_20px_45px_-5px_rgba(212,175,55,0.6)]
     hover:bg-[100%_0]
-    bg-pos-0 hover:bg-pos-100 transition-[background-position] duration-500
+    bg-pos-0 hover:bg-pos-100 transition-[background-position] duration-700
   `;
 
   const secondaryClasses = `
@@ -51,8 +50,8 @@ export const Button: React.FC<ButtonProps> = ({
     bg-gradient-to-r from-green-500 via-green-400 to-green-500
     bg-[length:200%_auto]
     text-white
-    shadow-[0_0_20px_rgba(34,197,94,0.4)]
-    hover:shadow-[0_0_35px_rgba(34,197,94,0.6)]
+    shadow-[0_10px_30px_rgba(34,197,94,0.4)]
+    hover:shadow-[0_15px_40px_rgba(34,197,94,0.6)]
     hover:bg-[100%_0]
     bg-pos-0 hover:bg-pos-100 transition-[background-position] duration-500
     drop-shadow-sm
@@ -72,7 +71,10 @@ export const Button: React.FC<ButtonProps> = ({
       className={`${baseClasses} ${getVariantClasses()} ${className}`}
     >
       {/* Sheen Animation Effect */}
-      <div className={`absolute inset-0 -translate-x-full ${autoShimmer ? 'animate-[shimmer_2.5s_infinite]' : 'group-hover:animate-[shimmer_1.5s_infinite]'} bg-gradient-to-r from-transparent via-white/40 to-transparent z-10 w-full h-full skew-x-12 pointer-events-none`} />
+      <div className={`absolute inset-0 -translate-x-full ${autoShimmer ? 'animate-[shimmer_2.5s_infinite]' : 'group-hover:animate-[shimmer_1.5s_infinite]'} bg-gradient-to-r from-transparent via-white/50 to-transparent z-10 w-full h-full skew-x-12 pointer-events-none`} />
+
+      {/* Gloss Overlay */}
+      <div className="absolute top-0 left-0 w-full h-1/2 bg-white/20 pointer-events-none z-10"></div>
 
       {/* Content */}
       <span className="relative z-20 flex items-center gap-2">
