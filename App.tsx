@@ -27,6 +27,7 @@ import { CountdownTimer } from './components/CountdownTimer';
 import { Button } from './components/Button';
 import { CheckoutForm } from './components/CheckoutForm';
 import { CookieConsent } from './components/CookieConsent';
+import { SupportAgent } from './components/SupportAgent';
 
 type AppStep = 'landing' | 'upsell' | 'success' | 'rules' | 'privacy' | 'terms' | 'contact';
 
@@ -175,7 +176,7 @@ const App: React.FC = () => {
                           Rezultati, prikazani na tej spletni strani, so primeri izjemnih dosežkov in rasti naših najuspešnejših študentov. Ti rezultati <strong className="text-gray-400">niso tipični</strong> in ne zagotavljajo, da boste dosegli enake ali podobne finančne izide. Uspeh v programu AI Universa je v celoti odvisen od vašega individualnega truda, predanosti, časa, ki ga namenite učenju, ter natančnega izvajanja naučenih strategij.
                       </p>
                       <p>
-                          Vsak posameznik vstopa v program z različnim predznanjem in delovno etiko, zato so <strong className="text-gray-400">vsi rezultati odvisni od vašega dela</strong>. Pridružitev programu ne pomeni avtomatskega zaslužka; gre za izobraževalni program za pridobivanje veščin digitalnega marketinga in uporabe AI.
+                          Vsak posameznik vstopa v program z različnim predznanjem i delovno etiko, zato so <strong className="text-gray-400">vsi rezultati odvisni od vašega dela</strong>. Pridružitev programu ne pomeni avtomatskega zaslužka; gre za izobraževalni program za pridobivanje veščin digitalnega marketinga in uporabe AI.
                       </p>
                   </div>
 
@@ -227,6 +228,9 @@ const App: React.FC = () => {
                       </div>
                   </div>
               )}
+
+              {/* AI Support Chatbot */}
+              <SupportAgent />
           </div>
         </div>
       )}
