@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Smartphone, Ticket, Trophy, Sparkles, Star, ShieldCheck } from 'lucide-react';
 
@@ -77,6 +76,8 @@ export const Sweepstakes: React.FC = () => {
                         src="https://storage.googleapis.com/msgsndr/TGsyH70nsz7y3hijuqTn/media/6962e5c0f13bc3497e783eb5.png" 
                         alt="MacBook Pro"
                         className="w-full h-full object-contain relative z-20"
+                        loading="lazy"
+                        decoding="async"
                     />
                 </div>
                 
@@ -101,6 +102,8 @@ export const Sweepstakes: React.FC = () => {
                         src="https://storage.googleapis.com/msgsndr/TGsyH70nsz7y3hijuqTn/media/6962a16398efbdd080a8d448.png" 
                         alt="Rolex Datejust" 
                         className="w-full h-full object-contain relative z-20 group-hover:scale-110 transition-transform duration-700" 
+                        loading="lazy"
+                        decoding="async"
                     />
                 </div>
                 
@@ -126,6 +129,8 @@ export const Sweepstakes: React.FC = () => {
                         src="https://storage.googleapis.com/msgsndr/TGsyH70nsz7y3hijuqTn/media/6962e5c0e1863868d4af000f.png" 
                         alt="iPhone 17 Pro"
                         className="w-full h-full object-contain relative z-20"
+                        loading="lazy"
+                        decoding="async"
                     />
                 </div>
                 

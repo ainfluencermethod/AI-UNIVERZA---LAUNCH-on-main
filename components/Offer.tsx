@@ -1,144 +1,145 @@
-
 import React from 'react';
-import { Zap, ShieldCheck, Lock, Star, Quote, LayoutDashboard, MonitorPlay, Users, BookOpen } from 'lucide-react';
+import { Zap, ShieldCheck, Lock, Star, Quote, LayoutDashboard, MonitorPlay, Users, BookOpen, AlertCircle } from 'lucide-react';
 import { CheckoutForm } from './CheckoutForm';
 
 export const Offer: React.FC = () => {
   return (
     <section id="offer" className="py-24 px-4 bg-gradient-to-br from-[#AA771C] via-[#FCF6BA] to-[#B38728] relative overflow-hidden">
        {/* Background noise/pattern */}
-       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none"></div>
-       <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.4),transparent)] pointer-events-none"></div>
+       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-40 pointer-events-none"></div>
+       <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.6),transparent_80%)] pointer-events-none"></div>
 
-       <div className="max-w-7xl mx-auto relative z-10">
+       <div className="max-w-[90rem] mx-auto relative z-10">
           
           {/* Header */}
-          <div className="text-center mb-12 flex flex-col items-center">
-              <h2 className="font-serif text-4xl md:text-6xl text-black font-black italic mb-6">
-                  Pridružite se AI Universi
+          <div className="text-center mb-16 flex flex-col items-center">
+              <div className="inline-flex items-center gap-3 bg-black border border-white/20 rounded-full px-6 py-2.5 mb-8 shadow-2xl animate-bounce">
+                  <AlertCircle className="w-4 h-4 text-brand-red" fill="currentColor" />
+                  <span className="text-white text-[11px] font-black uppercase tracking-[0.35em]">ZADNJA PRILOŽNOST ZA VPIS</span>
+              </div>
+              <h2 className="font-serif text-5xl md:text-8xl text-black font-black italic mb-6 leading-none tracking-tighter drop-shadow-sm">
+                  Pridruži se AI Universo
               </h2>
+              <p className="text-black/70 font-black uppercase tracking-[0.4em] text-sm md:text-lg bg-white/30 backdrop-blur-sm px-8 py-2 rounded-full border border-black/10">
+                 CELOTEN SISTEM ZA LETO 2026
+              </p>
           </div>
 
-          <div className="bg-white rounded-[2.5rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] flex flex-col lg:flex-row overflow-hidden border-4 border-black relative">
+          <div className="bg-[#050505] rounded-[2.5rem] md:rounded-[4rem] shadow-[0_80px_150px_-30px_rgba(0,0,0,0.8)] flex flex-col lg:flex-row overflow-hidden border-2 border-white/20 relative group">
               
-              {/* LEFT SIDE - Value Stack */}
-              <div className="lg:w-3/5 p-6 md:p-12 bg-white relative flex flex-col justify-between">
-                  <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-brand-gold to-yellow-300"></div>
+              {/* Value Stack Left Side */}
+              <div className="lg:w-3/5 p-8 md:p-16 bg-[#0a0a0a] relative flex flex-col justify-between">
+                  <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-brand-gold via-white to-brand-gold animate-shimmer"></div>
                   
                   <div>
-                    <h2 className="text-2xl md:text-3xl font-black text-black mb-8 flex items-center gap-3 uppercase tracking-tighter">
-                        < Zap className="fill-black w-6 h-6" />
-                        TVOJA BLIŽNJICA DO USPEHA:
-                    </h2>
+                    <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-4">
+                        <h2 className="text-3xl md:text-5xl font-black text-white flex items-center gap-4 uppercase tracking-tighter italic">
+                            <Zap className="fill-brand-gold text-brand-gold w-10 h-10" />
+                            VSEBINA PAKETA:
+                        </h2>
+                        <div className="bg-brand-red/10 border border-brand-red/30 px-4 py-2 rounded-xl text-brand-red font-black text-xs uppercase tracking-widest animate-pulse">
+                            ZADNJIH 24 UR
+                        </div>
+                    </div>
 
-                    <div className="space-y-4 mb-8">
+                    <div className="space-y-6 mb-12">
                         {/* Stack Item 1 */}
-                        <div className="flex gap-4 p-4 rounded-2xl border border-gray-100 shadow-sm bg-gray-50 hover:bg-white hover:shadow-md transition-all group/item">
-                            <div className="w-12 h-12 bg-black rounded-lg flex items-center justify-center shrink-0 group-hover/item:scale-110 transition-transform">
-                                <BookOpen className="text-white w-6 h-6" />
+                        <div className="flex gap-6 p-6 rounded-3xl border border-white/5 bg-white/[0.03] hover:bg-white/[0.07] hover:border-brand-gold/40 transition-all group/item shadow-2xl">
+                            <div className="w-16 h-16 bg-brand-gold rounded-2xl flex items-center justify-center shrink-0 group-hover/item:scale-110 transition-transform shadow-[0_10px_30px_rgba(212,175,55,0.4)] border-2 border-white/30">
+                                <BookOpen className="text-black w-8 h-8" strokeWidth={3} />
                             </div>
                             <div className="flex-1">
                                 <div className="flex justify-between items-start">
-                                    <h3 className="font-bold text-lg text-gray-900 leading-tight">AI Influencer Accelerator</h3>
-                                    <span className="font-mono font-bold text-gray-400 text-sm">1.997€</span>
+                                    <h3 className="font-black text-xl md:text-2xl text-white leading-tight uppercase tracking-tight">AI Influencer Accelerator</h3>
+                                    <span className="font-mono font-bold text-gray-600 text-sm hidden sm:block">1.997€</span>
                                 </div>
-                                <p className="text-xs text-gray-500 mt-1">Celoten sistem od nule do 100M ogledov.</p>
+                                <p className="text-sm md:text-base text-gray-400 mt-2 font-medium leading-relaxed">Sistem od 0 do viralnosti. Kako zgraditi brand brez uporabe obraza z uporabo najnaprednejših AI orodij.</p>
                             </div>
                         </div>
 
                         {/* Stack Item 2 */}
-                        <div className="flex gap-4 p-4 rounded-2xl border border-gray-100 shadow-sm bg-gray-50 hover:bg-white hover:shadow-md transition-all group/item">
-                             <div className="w-12 h-12 bg-black rounded-lg flex items-center justify-center shrink-0 group-hover/item:scale-110 transition-transform">
-                                <LayoutDashboard className="text-white w-6 h-6" />
+                        <div className="flex gap-6 p-6 rounded-3xl border border-white/5 bg-white/[0.03] hover:bg-white/[0.07] hover:border-brand-gold/40 transition-all group/item shadow-2xl">
+                             <div className="w-16 h-16 bg-brand-gold rounded-2xl flex items-center justify-center shrink-0 group-hover/item:scale-110 transition-transform shadow-[0_10px_30px_rgba(212,175,55,0.4)] border-2 border-white/30">
+                                <LayoutDashboard className="text-black w-8 h-8" strokeWidth={3} />
                             </div>
                             <div className="flex-1">
                                 <div className="flex justify-between items-start">
-                                    <h3 className="font-bold text-lg text-gray-900 leading-tight">AI Agencija</h3>
-                                    <span className="font-mono font-bold text-gray-400 text-sm">1.497€</span>
+                                    <h3 className="font-black text-xl md:text-2xl text-white leading-tight uppercase tracking-tight">AI Agencija B2B</h3>
+                                    <span className="font-mono font-bold text-gray-600 text-sm hidden sm:block">1.497€</span>
                                 </div>
-                                <p className="text-xs text-gray-500 mt-1">Celoten sistem od nule do prodajanje AI vsebine podjetjem (B2B).</p>
+                                <p className="text-sm md:text-base text-gray-400 mt-2 font-medium leading-relaxed">Nauči se prodajati AI storitve podjetjem. Od generiranja vsebin do avtomatizacije procesov.</p>
                             </div>
                         </div>
 
                         {/* Stack Item 3 */}
-                        <div className="flex gap-4 p-4 rounded-2xl border border-gray-100 shadow-sm bg-gray-50 hover:bg-white hover:shadow-md transition-all group/item">
-                             <div className="w-12 h-12 bg-black rounded-lg flex items-center justify-center shrink-0 group-hover/item:scale-110 transition-transform">
-                                <Users className="text-white w-6 h-6" />
+                        <div className="flex gap-6 p-6 rounded-3xl border border-white/5 bg-white/[0.03] hover:bg-white/[0.07] hover:border-brand-gold/40 transition-all group/item shadow-2xl">
+                             <div className="w-16 h-16 bg-brand-gold rounded-2xl flex items-center justify-center shrink-0 group-hover/item:scale-110 transition-transform shadow-[0_10px_30px_rgba(212,175,55,0.4)] border-2 border-white/30">
+                                <Users className="text-black w-8 h-8" strokeWidth={3} />
                             </div>
                             <div className="flex-1">
                                 <div className="flex justify-between items-start">
-                                    <h3 className="font-bold text-lg text-gray-900 leading-tight">Private Skool Skupnost</h3>
-                                    <span className="font-mono font-bold text-gray-400 text-sm">997€</span>
+                                    <h3 className="font-black text-xl md:text-2xl text-white leading-tight uppercase tracking-tight">Elite Skool Skupnost</h3>
+                                    <span className="font-mono font-bold text-gray-600 text-sm hidden sm:block">997€</span>
                                 </div>
-                                <p className="text-xs text-gray-500 mt-1">Dostop do skupnosti soustvarjalcev in mentorjev.</p>
+                                <p className="text-sm md:text-base text-gray-400 mt-2 font-medium leading-relaxed">Dostop do VIP mreže slovenskih AI ustvarjalcev. Tedenski klici v živo in podpora 24/7.</p>
                             </div>
                         </div>
                         
-                         {/* Stack Item 4 */}
-                        <div className="flex gap-4 p-4 rounded-2xl border border-gray-100 shadow-sm bg-gray-50 hover:bg-white hover:shadow-md transition-all group/item">
-                             <div className="w-12 h-12 bg-black rounded-lg flex items-center justify-center shrink-0 group-hover/item:scale-110 transition-transform">
-                                <MonitorPlay className="text-white w-6 h-6" />
-                            </div>
-                            <div className="flex-1">
-                                <div className="flex justify-between items-start">
-                                    <h3 className="font-bold text-lg text-gray-900 leading-tight">Mesečni Q&A Klici</h3>
-                                    <span className="font-mono font-bold text-gray-400 text-sm">497€</span>
-                                </div>
-                                <p className="text-xs text-gray-500 mt-1">Arhiv vseh preteklih klicev + dostop do novih.</p>
-                            </div>
-                        </div>
-
-
                         {/* Bonus Item */}
-                        <div className="flex gap-4 p-4 rounded-2xl border-2 border-brand-gold bg-[#fffde7] shadow-lg transform hover:scale-[1.01] transition-transform relative overflow-hidden group/bonus">
-                             <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-brand-gold/20 to-transparent rounded-bl-full -mr-4 -mt-4"></div>
-                             <div className="w-12 h-12 bg-brand-gold rounded-lg flex items-center justify-center shrink-0 shadow-sm group-hover/bonus:scale-110 transition-transform">
-                                <Star className="text-black w-6 h-6 fill-black" />
+                        <div className="flex gap-6 p-8 rounded-[2rem] border-2 border-brand-gold bg-brand-gold/10 shadow-[0_0_60px_rgba(212,175,55,0.2)] transform hover:scale-[1.02] transition-transform relative overflow-hidden group/bonus">
+                             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-brand-gold/30 to-transparent rounded-bl-full -mr-6 -mt-6 opacity-60"></div>
+                             <div className="w-16 h-16 bg-brand-gold rounded-2xl flex items-center justify-center shrink-0 shadow-[0_15px_40px_rgba(212,175,55,0.5)] group-hover/bonus:scale-110 transition-transform border-2 border-white/40">
+                                <Star className="text-black w-8 h-8 fill-black" />
                             </div>
                              <div className="flex-1 relative z-10">
-                                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 sm:gap-0">
-                                     <h3 className="font-bold text-lg text-black leading-tight flex flex-wrap items-center gap-2">
-                                         Vstopnica za 15.000€ Sklad
-                                         <span className="bg-brand-gold text-black text-[10px] px-2 py-0.5 rounded font-black uppercase shadow-sm whitespace-nowrap">Bonus</span>
+                                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-0">
+                                     <h3 className="font-black text-3xl md:text-4xl text-white leading-tight uppercase tracking-tighter">
+                                         15.000€ Nagradni Sklad
                                      </h3>
-                                     <span className="font-mono font-bold text-[#b8860b] text-xs sm:text-sm uppercase tracking-wider mt-1 sm:mt-0">Neprecenljivo</span>
+                                     <span className="bg-brand-red text-white text-[10px] px-4 py-1.5 rounded-full font-black uppercase shadow-2xl tracking-widest mt-2 sm:mt-0 animate-pulse">EKSKLUZIVNO</span>
                                  </div>
-                                 <p className="text-xs text-[#856404] mt-1 font-medium">Avtomatska udeležba v žrebanju za Rolex in Apple nagrade.</p>
+                                 <p className="text-sm md:text-lg text-brand-gold mt-3 font-black uppercase tracking-[0.2em]">AVTOMATSKA UDELEŽBA V ŽREBU ZA ROLEX, MACBOOK IN IPHONE</p>
                              </div>
                         </div>
                     </div>
                   </div>
 
-                  {/* Social Proof Sandwich */}
-                  <div className="mb-8 p-6 bg-gray-50 rounded-2xl border border-gray-100 relative">
-                        <Quote className="absolute top-4 left-4 text-gray-200 fill-gray-200 w-10 h-10 -z-10" />
-                        <div className="flex items-start gap-4">
-                            <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=Marko&backgroundColor=c0aede" className="w-12 h-12 rounded-full bg-gray-200" alt="Student" />
+                  {/* High Trust Testimonial */}
+                  <div className="mb-12 p-10 bg-white/[0.04] rounded-[2.5rem] border border-white/10 relative group/testimonial shadow-2xl">
+                        <Quote className="absolute top-8 left-8 text-white/5 fill-white/5 w-24 h-24 -z-10 group-hover/testimonial:scale-110 transition-transform" />
+                        <div className="flex items-start gap-6">
+                            <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=Rok&backgroundColor=c0aede" className="w-16 h-16 rounded-full border-2 border-brand-gold/50 bg-gray-900 shadow-2xl" alt="Student" />
                             <div>
-                                <div className="flex text-yellow-500 mb-1">
-                                    <Star size={14} fill="currentColor" /><Star size={14} fill="currentColor" /><Star size={14} fill="currentColor" /><Star size={14} fill="currentColor" /><Star size={14} fill="currentColor" />
+                                <div className="flex text-brand-gold mb-3 gap-1">
+                                    <Star size={18} fill="currentColor" /><Star size={18} fill="currentColor" /><Star size={18} fill="currentColor" /><Star size={18} fill="currentColor" /><Star size={18} fill="currentColor" />
                                 </div>
-                                <p className="text-gray-700 text-sm font-medium italic leading-relaxed">
-                                    "Najboljša investicija v letu 2026. Sistemi so jasni, skupnost pa izjemna."
+                                <p className="text-white text-xl md:text-2xl font-medium italic leading-relaxed tracking-tight">
+                                    "AI Universa je edino mesto v Sloveniji, kjer dobiš prave sisteme. Danes delam vsebino 10x hitreje in rezultati so fenomenalni."
                                 </p>
-                                <span className="text-[10px] font-black uppercase tracking-widest text-gray-400 mt-2 block">- Marko K., Ljubljana</span>
+                                <span className="text-xs font-black uppercase tracking-[0.3em] text-gray-500 mt-6 block">— ROK B., MARIBOR</span>
                             </div>
                         </div>
                   </div>
 
-                  <div className="flex items-center justify-between opacity-50 px-2">
-                       <div className="flex items-center gap-2 text-gray-600 text-xs font-bold uppercase tracking-widest">
-                           <ShieldCheck size={16} /> 100% Secure
+                  <div className="flex items-center justify-center md:justify-start gap-10 opacity-30 px-4 grayscale">
+                       <div className="flex items-center gap-3 text-white text-[11px] font-black uppercase tracking-[0.3em]">
+                           <ShieldCheck size={20} className="text-green-500" /> 14-DNI GARANCIJA
                        </div>
-                       <div className="flex items-center gap-2 text-gray-600 text-xs font-bold uppercase tracking-widest">
-                           <Lock size={16} /> Encryption
+                       <div className="flex items-center gap-3 text-white text-[11px] font-black uppercase tracking-[0.3em]">
+                           <Lock size={20} /> VARNO PLAČILO
                        </div>
                   </div>
               </div>
 
-              {/* RIGHT SIDE - Pricing & Form */}
-              <div className="lg:w-2/5 bg-gray-50 border-l border-gray-100 flex flex-col items-center justify-center py-12">
+              {/* Pricing & Form Side */}
+              <div className="lg:w-2/5 bg-black border-l-2 border-white/10 flex flex-col items-center justify-center py-20 relative px-6">
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.08),transparent_70%)] pointer-events-none"></div>
                   <CheckoutForm />
+                  <div className="mt-12 text-center max-w-sm">
+                      <p className="text-gray-500 text-[10px] font-black uppercase tracking-widest leading-relaxed">
+                          *Vsa mesta so omejena zaradi mentorske podpore. Vpis se zapre takoj, ko dosežemo kvoto ali ob izteku časa.
+                      </p>
+                  </div>
               </div>
 
           </div>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Instagram } from 'lucide-react';
 
@@ -99,7 +98,15 @@ export const Founders: React.FC = () => {
                 className="group bg-card-bg border border-white/10 rounded-3xl p-6 hover:border-brand-gold transition-all duration-300 hover:-translate-y-1 flex flex-col items-center"
             >
                 <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-white/10 group-hover:border-brand-gold transition-colors mb-4 relative bg-gray-800">
-                    <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                    <img 
+                        src={member.image} 
+                        alt={member.name} 
+                        className="w-full h-full object-cover" 
+                        loading="lazy"
+                        decoding="async"
+                        width="96"
+                        height="96"
+                    />
                 </div>
                 
                 <h3 className="text-white font-bold text-lg mb-1">{member.name}</h3>

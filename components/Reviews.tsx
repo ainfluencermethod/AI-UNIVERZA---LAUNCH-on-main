@@ -12,8 +12,15 @@ const reviewsData = [
 
 const ReviewCard: React.FC<{ src: string }> = ({ src }) => {
   return (
-    <div className="w-[280px] md:w-[350px] shrink-0 rounded-2xl overflow-hidden border border-white/10 bg-[#18181b] relative group hover:scale-[1.02] transition-transform duration-300 shadow-2xl">
-      <img src={src} alt="Review Screenshot" className="w-full h-auto object-contain" loading="lazy" />
+    <div className="w-[280px] md:w-[350px] shrink-0 rounded-2xl overflow-hidden border border-white/10 bg-[#18181b] relative group hover:scale-[1.02] transition-transform duration-300 shadow-2xl min-h-[150px]">
+      <img 
+        src={src} 
+        alt="Review Screenshot" 
+        className="w-full h-auto object-contain" 
+        loading="lazy" 
+        decoding="async"
+        width="350"
+      />
       <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
     </div>
   );
@@ -46,21 +53,15 @@ export const Reviews: React.FC = () => {
 
        <div className="flex gap-4 md:gap-6 overflow-hidden">
           {/* First loop */}
-          <div className="flex gap-4 md:gap-6 animate-scroll shrink-0 items-start">
+          <div className="flex gap-4 md:gap-6 animate-scroll shrink-0 items-start will-change-transform">
             {reviewsData.map((src, i) => (
                 <ReviewCard key={`r1-${i}`} src={src} />
             ))}
           </div>
           {/* Second loop */}
-          <div className="flex gap-4 md:gap-6 animate-scroll shrink-0 items-start">
+          <div className="flex gap-4 md:gap-6 animate-scroll shrink-0 items-start will-change-transform">
              {reviewsData.map((src, i) => (
                 <ReviewCard key={`r2-${i}`} src={src} />
-            ))}
-          </div>
-           {/* Third loop for smoothness */}
-           <div className="flex gap-4 md:gap-6 animate-scroll shrink-0 items-start">
-             {reviewsData.map((src, i) => (
-                <ReviewCard key={`r3-${i}`} src={src} />
             ))}
           </div>
        </div>
