@@ -127,4 +127,29 @@ export const ExitIntentPopup: React.FC = () => {
                     </p>
                     <div className="w-1.5 h-1.5 bg-gray-300 rounded-full"></div>
                     <p className="text-xs text-gray-400 font-bold uppercase tracking-widest">
-                        TAK
+                        TAKŠOJŠEN DOSTOP
+                    </p>
+                    <div className="w-1.5 h-1.5 bg-gray-300 rounded-full"></div>
+                    <p className="text-xs text-gray-400 font-bold uppercase tracking-widest">
+                        GARANCIJA
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        {/* Trust Footer */}
+        <div className="bg-white p-4 border-t border-gray-100 flex items-center justify-center gap-8 opacity-60">
+             <div className="flex items-center gap-2 text-[10px] font-black text-gray-500 uppercase tracking-widest">
+                <Sparkles size={14} className="text-brand-gold" /> VIP SKUPNOST
+             </div>
+             <div className="flex items-center gap-2 text-[10px] font-black text-gray-500 uppercase tracking-widest">
+                <Zap size={14} className="text-brand-gold" /> AI SISTEMI 2026
+             </div>
+             <div className="flex items-center gap-2 text-[10px] font-black text-gray-500 uppercase tracking-widest">
+                <Trophy size={14} className="text-brand-gold" /> 15.000€ SKLAD
+             </div>
+        </div>
+      </div>
+    </div>
+  );
+};

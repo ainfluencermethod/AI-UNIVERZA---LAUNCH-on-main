@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Check, ArrowRight, Zap } from 'lucide-react';
+import { Check, ArrowRight, Zap, Lock } from 'lucide-react';
 
 export const CheckoutForm: React.FC = () => {
   const handleCheckout = () => {
@@ -60,7 +59,7 @@ export const CheckoutForm: React.FC = () => {
              </div>
 
              {/* Trust/Payment Icons */}
-             <div className="w-full">
+             <div className="w-full mb-4">
                  <div className="flex justify-center gap-3 opacity-30 grayscale hover:grayscale-0 transition-all duration-300">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" className="h-5 object-contain" alt="Mastercard" />
                     <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" className="h-5 object-contain" alt="Visa" />
@@ -68,6 +67,12 @@ export const CheckoutForm: React.FC = () => {
                 </div>
              </div>
 
+             {/* Small Text Disclaimer Below CTA */}
+             <div className="px-2">
+                <p className="text-[10px] text-gray-400 leading-relaxed font-medium">
+                    *Celotna vrednost paketov v AI Universi znaša preko 4.491€, vendar smo se za kratek čas odločili, da vsem, ki so pripravljeni na digitalni preskok v 2026, omogočimo dostop za samo 497€. Vaša zasebnost je naša prioriteta, zato so vsi podatki 100% varno šifrirani in ne bodo nikoli deljeni.
+                </p>
+             </div>
         </div>
     </div>
   );

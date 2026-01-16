@@ -154,13 +154,26 @@ const App: React.FC = () => {
                 </section>
               </Suspense>
 
-              <footer className="text-center py-12 text-gray-600 text-[9px] md:text-xs bg-black border-t border-gray-900 relative z-10 px-4">
-                  <p className="mb-4">© 2026 AI Universa.</p>
-                  <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 underline mb-4 opacity-50">
-                      <button onClick={() => navigateTo('terms')} className="hover:text-brand-gold">Pogoji</button>
-                      <button onClick={() => navigateTo('rules')} className="hover:text-brand-gold">Pravila</button>
-                      <button onClick={() => navigateTo('privacy')} className="hover:text-brand-gold">Zasebnost</button>
-                      <button onClick={() => navigateTo('contact')} className="hover:text-brand-gold">Kontakt</button>
+              <footer className="py-16 md:py-24 px-6 bg-black border-t border-gray-900 relative z-10">
+                  <div className="max-w-4xl mx-auto text-center">
+                      <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 underline mb-10 opacity-60 text-[10px] md:text-xs font-bold uppercase tracking-widest">
+                          <button onClick={() => navigateTo('terms')} className="hover:text-brand-gold transition-colors">Pogoji Poslovanja</button>
+                          <button onClick={() => navigateTo('rules')} className="hover:text-brand-gold transition-colors">Pravila Nagradne Igre</button>
+                          <button onClick={() => navigateTo('privacy')} className="hover:text-brand-gold transition-colors">Politika Zasebnosti</button>
+                          <button onClick={() => navigateTo('contact')} className="hover:text-brand-gold transition-colors">Kontakt</button>
+                      </div>
+
+                      <div className="space-y-6 text-gray-600 text-[10px] md:text-xs leading-relaxed max-w-3xl mx-auto px-4 text-justify md:text-center">
+                          <p>
+                              <strong>ODPOVED ODGOVORNOSTI:</strong> Rezultati, prikazani na tej strani, niso tipični. Vsak posameznik ima drugačne izkušnje, delovne navade in sposobnosti. Uspeh v digitalnem svetu zahteva čas, trud in vztrajnost. AI Universa ne zagotavlja finančnega uspeha, določenega zneska zaslužka ali zmag v nagradni igri samo na podlagi vstopa v program.
+                          </p>
+                          <p>
+                              Ta stran ni del spletnega mesta Facebook ali Facebook Inc. Poleg tega te strani Facebook na noben način ne podpira. FACEBOOK je blagovna znamka družbe FACEBOOK, Inc. Vsi izdelki in storitve na tej strani so namenjeni izključno izobraževanju in informiranju.
+                          </p>
+                          <p className="opacity-40">
+                              © 2026 AI Universa. Vse pravice pridržane. 3PM d.o.o., Prušnikova ulica 19, 1210 Ljubljana - Šentvid.
+                          </p>
+                      </div>
                   </div>
               </footer>
 
