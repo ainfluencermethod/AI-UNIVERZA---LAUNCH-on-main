@@ -67,7 +67,7 @@ const App: React.FC = () => {
   const scrollToOffer = () => {
     const offerElement = document.getElementById('offer');
     if (offerElement) {
-      offerElement.scrollIntoView({ behavior: 'smooth' });
+      offerElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 
@@ -90,10 +90,10 @@ const App: React.FC = () => {
           <ParallaxBackground />
 
           <div className="relative z-10 w-full overflow-hidden">
-              <CountdownTimer variant="sticky" />
+              <CountdownTimer variant="sticky" onAction={scrollToOffer} />
               
               <div className="perf-hardware-accel">
-                <Hero />
+                <Hero onAction={scrollToOffer} />
               </div>
               
               <Suspense fallback={<SectionLoader />}>
@@ -146,7 +146,7 @@ const App: React.FC = () => {
                     <Sweepstakes />
                 </section>
 
-                <section id="offer" className="perf-section-visibility scroll-mt-24 md:scroll-mt-32">
+                <section className="perf-section-visibility min-h-[800px]">
                     <Offer />
                 </section>
                 

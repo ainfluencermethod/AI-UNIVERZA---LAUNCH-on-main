@@ -23,8 +23,8 @@ export const Offer: React.FC = () => {
            </div>
        </div>
 
-       {/* Main Offer Content */}
-       <div className="py-12 md:py-24 px-3 md:px-4 bg-gradient-to-br from-[#AA771C] via-[#FCF6BA] to-[#B38728] relative">
+       {/* Main Offer Content - TARGET SECTION FOR CTA */}
+       <div id="offer" className="py-12 md:py-24 px-3 md:px-4 bg-gradient-to-br from-[#AA771C] via-[#FCF6BA] to-[#B38728] relative scroll-mt-20 md:scroll-mt-32">
             {/* Background noise/pattern */}
             <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-40 pointer-events-none"></div>
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.6),transparent_80%)] pointer-events-none"></div>

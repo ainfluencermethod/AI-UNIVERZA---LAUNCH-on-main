@@ -1,12 +1,14 @@
+
 import React, { useState, useEffect, useMemo } from 'react';
 import { Zap } from 'lucide-react';
 
 interface CountdownTimerProps {
   targetDateStr?: string;
   variant?: 'pill' | 'sticky' | 'minimal';
+  onAction?: () => void;
 }
 
-export const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDateStr, variant = 'pill' }) => {
+export const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDateStr, variant = 'pill', onAction }) => {
   const targetDate = useMemo(() => new Date(targetDateStr || '2026-01-16T23:59:00').getTime(), [targetDateStr]);
   
   const calculateTimeLeft = () => {
@@ -38,48 +40,43 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDateStr, v
 
   if (variant === 'sticky') {
       return (
-        <div className="fixed top-0 left-0 right-0 z-[100] bg-black border-b-2 border-brand-red/20 backdrop-blur-3xl flex items-center justify-center py-2 md:py-4 px-4 shadow-[0_10px_30px_rgba(0,0,0,0.8)] animate-fade-in-up">
-             <div className="flex items-center gap-2 md:gap-16 max-w-[90rem] mx-auto w-full justify-between">
+        <div className="fixed top-0 left-0 right-0 z-[100] bg-black/95 border-b border-white/10 backdrop-blur-3xl flex items-center justify-center py-4 px-6 shadow-2xl animate-fade-in-up">
+             <div className="flex items-center gap-4 md:gap-12 max-w-[90rem] mx-auto w-full justify-between">
                 
                 {/* Status Indicator */}
-                <div className="flex items-center gap-2 md:gap-4 group cursor-default">
-                    <div className="relative flex h-3 w-3 md:h-4 md:w-4 shrink-0">
+                <div className="flex items-center gap-3">
+                    <div className="relative flex h-3 w-3 md:h-5 md:w-5">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-red opacity-75"></span>
-                      <span className="relative inline-flex rounded-full h-3 w-3 md:h-4 md:w-4 bg-brand-red shadow-[0_0_10px_rgba(255,49,49,1)]"></span>
+                      <span className="relative inline-flex rounded-full h-3 w-3 md:h-5 md:w-5 bg-brand-red shadow-[0_0_15px_rgba(255,49,49,1)]"></span>
                     </div>
                     <div className="flex flex-col">
-                        <span className="text-[10px] md:text-base font-black text-white uppercase tracking-tighter leading-none">
+                        <span className="text-xs md:text-xl font-black text-white uppercase tracking-tighter leading-none">
                            VPIS SE ZAPRE ČEZ:
                         </span>
-                        <span className="text-[7px] md:text-[10px] text-brand-red font-black uppercase tracking-[0.2em] mt-1 animate-pulse">
+                        <span className="text-[8px] md:text-xs text-brand-red font-black uppercase tracking-[0.2em] mt-1 animate-pulse">
                             ZADNJA PRILOŽNOST VPISA
                         </span>
                     </div>
                 </div>
 
-                {/* Main Countdown Display */}
-                <div className="flex items-center gap-2 md:gap-10">
-                    <div className="flex items-center gap-2 md:gap-8">
-                        <TimeUnit value={timeLeft.days} label="DNI" />
-                        <Separator />
-                        <TimeUnit value={timeLeft.hours} label="UR" />
-                        <Separator />
-                        <TimeUnit value={timeLeft.minutes} label="MIN" />
-                        <Separator />
-                        <TimeUnit value={timeLeft.seconds} label="SEK" isSeconds />
-                    </div>
+                {/* Main Countdown Display - Matching Screenshot */}
+                <div className="flex items-center gap-3 md:gap-8">
+                    <TimeUnit value={timeLeft.days} label="DNI" color="gold" />
+                    <Separator />
+                    <TimeUnit value={timeLeft.hours} label="UR" color="gold" />
+                    <Separator />
+                    <TimeUnit value={timeLeft.minutes} label="MIN" color="gold" />
+                    <Separator />
+                    <TimeUnit value={timeLeft.seconds} label="SEK" color="red" />
                 </div>
                 
-                {/* High Contrast CTA */}
-                <div className="hidden lg:block">
+                {/* CTA - Hidden on very small screens */}
+                <div className="hidden sm:block">
                     <button 
-                        onClick={() => document.getElementById('offer')?.scrollIntoView({ behavior: 'smooth' })}
-                        className="group relative overflow-hidden bg-brand-red text-white text-[11px] font-black uppercase tracking-[0.3em] py-3 px-8 rounded-xl transition-all shadow-[0_0_20px_rgba(255,49,49,0.5)] transform hover:scale-105 active:scale-95 border-t border-white/30 animate-shake"
+                        onClick={onAction}
+                        className="group bg-brand-red text-white text-[10px] md:text-xs font-black uppercase tracking-[0.3em] py-3 px-6 md:px-10 rounded-xl transition-all shadow-[0_0_25px_rgba(255,49,49,0.4)] hover:scale-105 active:scale-95 border-t border-white/20"
                     >
-                        <span className="relative z-10 flex items-center gap-2">
-                           <Zap size={14} className="fill-white" /> VPIS ZDAJ
-                        </span>
-                        <div className="absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                        ZAGOTOVI MESTO
                     </button>
                 </div>
              </div>
@@ -90,17 +87,17 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDateStr, v
   return null;
 };
 
-const TimeUnit = ({ value, label, isSeconds = false }: { value: number, label: string, isSeconds?: boolean }) => (
-    <div className={`flex flex-col items-center min-w-[30px] md:min-w-[55px] transition-all duration-300`}>
-        <span className={`text-xl md:text-5xl font-black tabular-nums tracking-tighter ${isSeconds ? 'text-brand-red' : 'text-brand-gold'} leading-none drop-shadow-[0_0_10px_rgba(212,175,55,0.2)]`}>
+const TimeUnit = ({ value, label, color }: { value: number, label: string, color: 'gold' | 'red' }) => (
+    <div className="flex flex-col items-center min-w-[32px] md:min-w-[60px]">
+        <span className={`text-2xl md:text-6xl font-black tabular-nums tracking-tighter leading-none ${color === 'red' ? 'text-brand-red drop-shadow-[0_0_15px_rgba(255,49,49,0.3)]' : 'text-brand-gold drop-shadow-[0_0_15px_rgba(212,175,55,0.3)]'}`}>
             {String(value).padStart(2, '0')}
         </span>
-        <span className={`text-[6px] md:text-[10px] font-black text-gray-500 uppercase tracking-widest mt-1 md:mt-2`}>
+        <span className="text-[7px] md:text-[11px] font-black text-gray-500 uppercase tracking-widest mt-1 md:mt-2">
             {label}
         </span>
     </div>
 );
 
 const Separator = () => (
-    <span className="text-gray-800 text-sm md:text-4xl -mt-3 md:-mt-8 font-black select-none opacity-50">:</span>
+    <span className="text-gray-800 text-lg md:text-5xl -mt-4 md:-mt-8 font-black opacity-40">:</span>
 );
