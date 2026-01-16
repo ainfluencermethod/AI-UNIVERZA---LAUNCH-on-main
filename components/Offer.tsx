@@ -38,7 +38,7 @@ export const Offer: React.FC = () => {
                         <span className="text-white text-[9px] md:text-[11px] font-black uppercase tracking-[0.35em]">ZADNJA PRILOŽNOST ZA VPIS</span>
                     </div>
                     <h2 className="font-serif text-4xl md:text-8xl text-black font-black italic mb-4 md:mb-6 leading-none tracking-tighter drop-shadow-sm px-2">
-                        Pridruži se AI Universo
+                        Pridruži se AI Universi
                     </h2>
                     <p className="text-black/70 font-black uppercase tracking-[0.25em] md:tracking-[0.4em] text-[10px] md:text-lg bg-white/30 backdrop-blur-sm px-6 py-1.5 md:px-8 md:py-2 rounded-full border border-black/10">
                         CELOTEN SISTEM ZA LETO 2026
@@ -71,9 +71,9 @@ export const Offer: React.FC = () => {
                                     <div className="flex-1">
                                         <div className="flex justify-between items-start">
                                             <h3 className="font-black text-lg md:text-2xl text-white leading-tight uppercase tracking-tight">AI Influencer Accelerator</h3>
-                                            <span className="font-mono font-bold text-gray-600 text-[10px] md:text-sm hidden sm:block">1.997€</span>
+                                            <span className="font-mono font-bold text-gray-600 text-[10px] md:text-sm hidden sm:block">1.997 €</span>
                                         </div>
-                                        <p className="text-[12px] md:text-base text-gray-400 mt-1.5 font-medium leading-tight md:leading-relaxed">Sistem od 0 do viralnosti. Kako zgraditi brand brez uporabe obraza.</p>
+                                        <p className="text-[12px] md:text-base text-gray-400 mt-1.5 font-medium leading-tight md:leading-relaxed">Sistem od 0 do viralnosti. Kako zgraditi blagovno znamko brez uporabe obraza.</p>
                                     </div>
                                 </div>
 
@@ -85,7 +85,7 @@ export const Offer: React.FC = () => {
                                     <div className="flex-1">
                                         <div className="flex justify-between items-start">
                                             <h3 className="font-black text-lg md:text-2xl text-white leading-tight uppercase tracking-tight">AI Agencija B2B</h3>
-                                            <span className="font-mono font-bold text-gray-600 text-[10px] md:text-sm hidden sm:block">1.497€</span>
+                                            <span className="font-mono font-bold text-gray-600 text-[10px] md:text-sm hidden sm:block">1.497 €</span>
                                         </div>
                                         <p className="text-[12px] md:text-base text-gray-400 mt-1.5 font-medium leading-tight md:leading-relaxed">Nauči se prodajati AI storitve podjetjem in avtomatizirati procese.</p>
                                     </div>
@@ -98,8 +98,8 @@ export const Offer: React.FC = () => {
                                     </div>
                                     <div className="flex-1">
                                         <div className="flex justify-between items-start">
-                                            <h3 className="font-black text-lg md:text-2xl text-white leading-tight uppercase tracking-tight">Elite Skool Skupnost</h3>
-                                            <span className="font-mono font-bold text-gray-600 text-[10px] md:text-sm hidden sm:block">997€</span>
+                                            <h3 className="font-black text-lg md:text-2xl text-white leading-tight uppercase tracking-tight">Elite Skool skupnost</h3>
+                                            <span className="font-mono font-bold text-gray-600 text-[10px] md:text-sm hidden sm:block">997 €</span>
                                         </div>
                                         <p className="text-[12px] md:text-base text-gray-400 mt-1.5 font-medium leading-tight md:leading-relaxed">Dostop do VIP mreže slovenskih AI ustvarjalcev in tedenski klici.</p>
                                     </div>
@@ -114,7 +114,7 @@ export const Offer: React.FC = () => {
                                     <div className="flex-1 relative z-10">
                                         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 sm:gap-0">
                                             <h3 className="font-black text-xl md:text-4xl text-white leading-tight uppercase tracking-tighter">
-                                                15.000€ Nagradni Sklad
+                                                15.000 € nagradni sklad
                                             </h3>
                                             <span className="bg-brand-red text-white text-[8px] md:text-[10px] px-3 py-1 rounded-full font-black uppercase shadow-2xl tracking-widest mt-1 sm:mt-0 animate-pulse w-fit">EKSKLUZIVNO</span>
                                         </div>
@@ -134,7 +134,7 @@ export const Offer: React.FC = () => {
                                         <Star size={14} fill="currentColor" className="md:size-[18px]" /><Star size={14} fill="currentColor" className="md:size-[18px]" /><Star size={14} fill="currentColor" className="md:size-[18px]" /><Star size={14} fill="currentColor" className="md:size-[18px]" /><Star size={14} fill="currentColor" className="md:size-[18px]" />
                                     </div>
                                     <p className="text-white text-base md:text-2xl font-medium italic leading-relaxed tracking-tight">
-                                        "AI Universa je edino mesto v Sloveniji, kjer dobiš prave sisteme. Danes delam vsebino 10x hitreje."
+                                        "AI Universa je edino mesto v Sloveniji, kjer dobiš prave sisteme. Danes delam vsebino 10-krat hitreje."
                                     </p>
                                     <span className="text-[9px] md:text-xs font-black uppercase tracking-[0.3em] text-gray-500 mt-4 md:mt-6 block">— ROK B., MARIBOR</span>
                                 </div>
@@ -143,7 +143,7 @@ export const Offer: React.FC = () => {
 
                         <div className="flex items-center justify-center md:justify-start gap-6 md:gap-10 opacity-30 px-2 md:px-4 grayscale scale-90 md:scale-100">
                             <div className="flex items-center gap-2 md:gap-3 text-white text-[9px] md:text-[11px] font-black uppercase tracking-[0.2em] md:tracking-[0.3em] whitespace-nowrap">
-                                <ShieldCheck size={16} className="text-green-500 md:size-5" /> 14-DNI GARANCIJA
+                                <ShieldCheck size={16} className="text-green-500 md:size-5" /> 14 DNI GARANCIJE
                             </div>
                             <div className="flex items-center gap-2 md:gap-3 text-white text-[9px] md:text-[11px] font-black uppercase tracking-[0.2em] md:tracking-[0.3em] whitespace-nowrap">
                                 <Lock size={16} className="md:size-5" /> VARNO PLAČILO

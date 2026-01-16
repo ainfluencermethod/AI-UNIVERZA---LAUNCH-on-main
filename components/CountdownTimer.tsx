@@ -49,7 +49,7 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDateStr, v
                     </div>
                     <div className="flex flex-col">
                         <span className="text-[10px] md:text-base font-black text-white uppercase tracking-tighter leading-none">
-                           ZAPIRA SE ČEZ:
+                           VPIS SE ZAPRE ČEZ:
                         </span>
                         <span className="text-[7px] md:text-[10px] text-brand-red font-black uppercase tracking-[0.2em] mt-1 animate-pulse">
                             ZADNJA PRILOŽNOST VPISA

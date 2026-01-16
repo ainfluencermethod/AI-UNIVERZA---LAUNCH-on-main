@@ -27,15 +27,15 @@ export const Hero: React.FC = () => {
 
         {/* 1. Impact Headline - Optimized for mobile scaling */}
         <h1 className="text-[26px] sm:text-4xl md:text-5xl lg:text-6xl font-sans font-black text-white leading-[1.1] mb-4 tracking-tighter max-w-4xl mx-auto animate-fade-in-up px-2 drop-shadow-2xl">
-          Nauči se Graditi <br className="md:block" />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#FFFBD5] via-[#FCF6BA] to-[#B38728] italic pr-1 drop-shadow-[0_0_10px_rgba(212,175,55,0.3)]">AI Digitalne Imperije</span> 
+          Nauči se graditi <br className="md:block" />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#FFFBD5] via-[#FCF6BA] to-[#B38728] italic pr-1 drop-shadow-[0_0_10px_rgba(212,175,55,0.3)]">AI digitalne imperije</span> 
           <br className="md:block" /> 
-          in Prevzemi Nadzor v 2026
+          in prevzemi nadzor v letu 2026
         </h1>
 
         {/* 2. Subheadline - Reduced padding on mobile */}
         <p className="text-[12px] sm:text-sm md:text-lg text-gray-400 font-medium mb-6 md:mb-8 max-w-2xl mx-auto leading-relaxed animate-fade-in-up px-4 md:px-8 opacity-90">
-            Pridruži se v <span className="text-white font-bold border-b border-brand-gold">AI Universo</span>, ko ti pokažemo točen sistem, ki nam je ustvaril 10.000€+ v samo 7 dneh. Brez olepšav, samo rezultati.
+            Pridruži se <span className="text-white font-bold border-b border-brand-gold">AI Universi</span>, kjer ti pokažemo natančen sistem, ki nam je ustvaril več kot 10.000 € v samo 7 dneh. Brez olepšav, samo rezultati.
         </p>
 
         {/* Video Player Section */}
@@ -54,7 +54,7 @@ export const Hero: React.FC = () => {
              <div className="flex flex-col items-center w-full max-w-[320px] md:max-w-none md:w-auto relative">
                  <div className="bg-gradient-to-b from-[#1a1a1a] to-black border border-brand-gold/50 text-brand-gold px-5 py-2 rounded-full text-[9px] md:text-xs font-black uppercase tracking-[0.2em] flex items-center gap-2.5 mb-5 shadow-2xl backdrop-blur-xl z-30 hover:border-brand-gold hover:scale-110 transition-all cursor-pointer group/trophy">
                     <Trophy size={14} className="fill-brand-gold animate-bounce md:size-4" />
-                    POTEGUJ SE ZA 15.000€ NAGRAD
+                    POTEGUJ SE ZA 15.000 € NAGRAD
                  </div>
 
                  <div className="relative group w-full flex justify-center cursor-pointer mb-6 animate-shake">
@@ -71,7 +71,7 @@ export const Hero: React.FC = () => {
 
                  <div className="flex items-center gap-2 mb-8 text-brand-red font-black text-[9px] md:text-xs uppercase tracking-[0.2em] animate-pulse drop-shadow-[0_0_8px_rgba(255,49,49,0.5)]">
                     <div className="w-1.5 h-1.5 rounded-full bg-brand-red shadow-[0_0_8px_rgba(255,49,49,1)]"></div>
-                    ZADNJA MESTA ZA VPIS V 2026
+                    ZADNJA MESTA ZA VPIS V LETU 2026
                  </div>
 
                  <div className="grid grid-cols-2 gap-3 md:gap-4 w-full max-w-sm mx-auto mb-8">
@@ -79,7 +79,7 @@ export const Hero: React.FC = () => {
                         <div className="bg-brand-gold/20 p-2 rounded-lg group-hover/card:scale-110 transition-transform shrink-0 md:p-2.5">
                             <Ghost className="text-brand-gold" size={16} />
                         </div>
-                        <span className="text-white font-black text-[8px] md:text-[11px] uppercase tracking-widest text-left leading-tight">100% BREZ<br/>OBRAZA</span>
+                        <span className="text-white font-black text-[8px] md:text-[11px] uppercase tracking-widest text-left leading-tight">100 % BREZ<br/>OBRAZA</span>
                     </div>
                     <div className="bg-white/[0.05] border border-white/10 rounded-xl p-3 md:p-4 flex items-center gap-3 group/card hover:border-brand-gold/60 hover:bg-white/[0.08] transition-all cursor-default shadow-xl">
                         <div className="bg-brand-gold/20 p-2 rounded-lg group-hover/card:scale-110 transition-transform shrink-0 md:p-2.5">
@@ -92,12 +92,12 @@ export const Hero: React.FC = () => {
                  <div className="flex items-center justify-center gap-6 opacity-50 text-[8px] md:text-[9px] font-black uppercase tracking-[0.25em] text-gray-400 pb-4">
                     <div className="flex items-center gap-2">
                         <ShieldCheck size={10} className="text-green-500 md:size-3" />
-                        <span>14-dni Garancija</span>
+                        <span>14 dni garancije</span>
                     </div>
                     <div className="w-1 h-1 bg-white/30 rounded-full md:w-1.5 md:h-1.5"></div>
                     <div className="flex items-center gap-2">
                         <Lock size={10} className="md:size-3" />
-                        <span>Varno Plačilo</span>
+                        <span>Varno plačilo</span>
                     </div>
                  </div>
              </div>

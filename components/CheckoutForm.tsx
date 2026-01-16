@@ -32,19 +32,19 @@ export const CheckoutForm: React.FC = () => {
              <div className="w-full text-left space-y-3 mb-8 px-2">
                 <div className="flex items-start gap-3">
                     <div className="bg-green-100 p-0.5 rounded-full text-green-600 mt-0.5 shrink-0"><Check size={12} strokeWidth={4} /></div>
-                    <span className="text-gray-700 text-sm font-bold leading-tight">Celoten AI Influencer Sistem</span>
+                    <span className="text-gray-700 text-sm font-bold leading-tight">Celoten AI Influencer sistem</span>
                 </div>
                 <div className="flex items-start gap-3">
                     <div className="bg-green-100 p-0.5 rounded-full text-green-600 mt-0.5 shrink-0"><Check size={12} strokeWidth={4} /></div>
-                    <span className="text-gray-700 text-sm font-bold leading-tight">Celoten Agencija/Brand Sistem</span>
+                    <span className="text-gray-700 text-sm font-bold leading-tight">Celoten sistem agencije / blagovne znamke</span>
                 </div>
                  <div className="flex items-start gap-3">
                     <div className="bg-green-100 p-0.5 rounded-full text-green-600 mt-0.5 shrink-0"><Check size={12} strokeWidth={4} /></div>
-                    <span className="text-gray-700 text-sm font-bold leading-tight">Dostop do Skool Skupnosti</span>
+                    <span className="text-gray-700 text-sm font-bold leading-tight">Dostop do Skool skupnosti</span>
                 </div>
                  <div className="flex items-start gap-3">
                     <div className="bg-green-100 p-0.5 rounded-full text-green-600 mt-0.5 shrink-0"><Check size={12} strokeWidth={4} /></div>
-                    <span className="text-gray-700 text-sm font-bold leading-tight">Vstopnica za 15.000€ Sklad</span>
+                    <span className="text-gray-700 text-sm font-bold leading-tight">Vstopnica za 15.000 € nagradni sklad</span>
                 </div>
              </div>
 
@@ -70,7 +70,7 @@ export const CheckoutForm: React.FC = () => {
              {/* Small Text Disclaimer Below CTA */}
              <div className="px-2">
                 <p className="text-[10px] text-gray-400 leading-relaxed font-medium">
-                    *Celotna vrednost paketov v AI Universi znaša preko 4.491€, vendar smo se za kratek čas odločili, da vsem, ki so pripravljeni na digitalni preskok v 2026, omogočimo dostop za samo 497€. Vaša zasebnost je naša prioriteta, zato so vsi podatki 100% varno šifrirani in ne bodo nikoli deljeni.
+                    *Celotna vrednost paketov v AI Universi znaša preko 4.491 €, vendar smo se za kratek čas odločili, da vsem, ki so pripravljeni na digitalni preskok v letu 2026, omogočimo dostop za samo 497 €. Vaša zasebnost je naša prioriteta, zato so vsi podatki 100 % varno šifrirani in ne bodo nikoli deljeni.
                 </p>
              </div>
         </div>
